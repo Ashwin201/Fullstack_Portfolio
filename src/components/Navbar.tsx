@@ -123,7 +123,7 @@ const Navbar = () => {
                                 <div className="fixed inset-0 z-50 bg-black bg-opacity-50 md:hidden" onClick={toggleNavbar}></div>
                             )}
 
-                            <div className={`fixed top-0 right-0 z-50 h-[100vh] w-[300px] transform transition-transform duration-300 ease-in-out flex flex-col justify-between ${isOpen ? 'translate-x-0' : 'translate-x-full'} md:hidden dark:bg-gradient-to-t dark:from-neutral-900 dark:to-stone-950 bg-gradient-to-t from-white to-slate-50`}>
+                            <div className={`fixed top-0 right-0 z-50 h-full w-[300px] transform transition-transform duration-300 ease-in-out flex flex-col justify-between ${isOpen ? 'translate-x-0' : 'translate-x-full'} md:hidden dark:bg-gradient-to-t dark:from-neutral-900 dark:to-stone-950 bg-gradient-to-t from-white to-slate-50`}>
                                 <div>
                                     <div className="flex justify-between items-center p-4">
                                         <Link href={"#Home"} aria-label='Home Link' onClick={toggleNavbar}>
@@ -133,8 +133,8 @@ const Navbar = () => {
                                             <RxCross2 className="h-5 w-5" />
                                         </button>
                                     </div>
-                                    <nav>
-                                        <ul className="flex flex-col gap-4 items-start justify-start p-4">
+                                    <nav >
+                                        <ul className="flex flex-col gap-4 items-start justify-start p-4 mt-1">
                                             <Link href={`#Home`} className="text-gray-700 dark:text-gray-300 text-base font-medium flex items-center gap-3" onClick={toggleNavbar} aria-label='Home'>
                                                 <House size={22} /> Home
                                             </Link>
@@ -158,7 +158,7 @@ const Navbar = () => {
 
 
                                 </div>
-                                <div className=' p-3'>
+                                <div className=' p-4'>
                                     <Link onClick={toggleNavbar} href={`${userData?.resume}`} aria-label='Resume Link' className='w-full text-base font-medium flex items-center gap-3 '>
                                         <Button className="flex items-center gap-2 justify-center w-full">
                                             <FolderDown size={20} /> Download CV

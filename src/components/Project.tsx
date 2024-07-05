@@ -92,7 +92,7 @@ const Project: React.FC = () => {
                                                 width={100}
                                                 height={100}
                                                 alt={item?.title}
-                                                className="w-full h-[155px]  rounded-md object-fill"
+                                                className="w-full h-[160px]  rounded-md object-cover"
                                             />
                                         </div>
                                         <CardHeader>
