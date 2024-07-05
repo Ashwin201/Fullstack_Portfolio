@@ -1,16 +1,24 @@
 import User from "@/models/User";
 import { connectToDb } from "@/mongodb/database";
-import NextAuth from "next-auth";
-
+import NextAuth, { NextAuthOptions } from "next-auth";
+import { NextApiRequest, NextApiResponse } from "next";
 import CredentialsProvider from "next-auth/providers/credentials";
-export const authOptions = {
+
+const authOptions: NextAuthOptions = {
   // Configure one or more authentication providers
   providers: [
     // ...add more providers here
     CredentialsProvider({
       name: "credentials",
+      credentials: {
+        email: { label: "Email", type: "email" },
+        password: { label: "Password", type: "password" },
+      },
       async authorize(credentials) {
         try {
+          if (!credentials) {
+            throw new Error("No credentials provided");
+          }
           const { email, password } = credentials;
           await connectToDb();
 
@@ -22,11 +30,12 @@ export const authOptions = {
           if (user.password === password) {
             return user;
           } else {
-            console.log("User not found");
+            console.log("Invalid password");
             return null;
           }
         } catch (error) {
           console.log("Error during authentication:", error);
+          return null;
         }
       },
     }),
