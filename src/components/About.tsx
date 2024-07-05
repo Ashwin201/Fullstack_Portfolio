@@ -53,13 +53,13 @@ const About = () => {
                     )) : (
                         <>
                             <p>
-                                Hi, I'm Ashmin Sharma, a web developer proficient in front-end technologies, and good in back-end technologies as well. With expertise in frameworks like Nextjs ,
+                                Hi, I&apos;m Ashmin Sharma, a web developer proficient in front-end technologies, and good in back-end technologies as well. With expertise in frameworks like Nextjs ,
                                 I specialize in crafting visually appealing and responsive websites that prioritize a seamless user experience. My skills extend to database management with MongoDB,
                                 ensuring robust back-end support for web applications. Efficeint in version control with Git and collaborating effectively within teams.
                             </p>
                             <p>
                                 Explore my portfolio to witness my commitment to turning ideas into functional, innovative, and user-centric web solutions.
-                                Let's connect and discuss how I can bring your digital vision to life!
+                                Let&apos;s connect and discuss how I can bring your digital vision to life!
                             </p>
                         </>
                     )}
@@ -190,8 +190,8 @@ const About = () => {
                                                 {item?.duration}
                                             </div>
                                             <div className=" mb-8 ">
-                                                {item?.description?.map((desc: any) => (
-                                                    <p className="font-medium  text-gray-600 dark:text-gray-400">
+                                                {item?.description?.map((desc: any, index: number) => (
+                                                    <p key={index} className="font-medium  text-gray-600 dark:text-gray-400">
                                                         {desc}
                                                     </p>
                                                 ))}

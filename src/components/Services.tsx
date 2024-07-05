@@ -41,7 +41,7 @@ const Services = () => {
                         <Image src={design} width={150} height={150} className=" w-[150px] h-auto" alt="service" />
                     </div>
                     <div className="font-bold text-center  text-[28px]   bg-clip-text text-transparent bg-gradient-to-b from-neutral-500 to-neutral-700">
-                        Web Design's
+                        Web Design&apos;s
                     </div>
                     <p className="mt-6 text-center text-base font-medium  text-gray-600 dark:text-gray-400">
                         Specialize in creating customized, interactive, and visually  appealing designs to meet your preferences and needs.
