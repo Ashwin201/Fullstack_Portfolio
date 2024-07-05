@@ -24,14 +24,14 @@ const MobileSidebar = () => {
         <>
             <div className=" flex items-center gap-3 lg:hidden -ml-4 ">
                 <Link href="/" className="flex items-center gap-2 ">
-                    <Image src={logo} alt="Logo" className=" w-[32px] h-[32px] rounded-md " />
+                    <Image src={logo} alt="Logo" className=" w-[33px] h-[33px] rounded-md " />
                 </Link>
                 <Drawer>
                     <DrawerTrigger>
-                        {loader ? (
+                        {loader || !userData?.profile ? (
                             <Image src={profilePic} width={35} height={35} alt="Profile Picture" className="  w-[32px] h-[32px] rounded-full border-2 border-gray-400 dark:border-gray-900" />
                         ) : (
-                            <Image src={`${userData?.profile}`} width={35} height={35} alt="Profile Picture" className="  w-[32px] h-[32px] rounded-full border-2 border-gray-400 dark:border-gray-900" />
+                            <Image src={`${userData?.profile}`} width={35} height={35} alt="Profile Picture" className="  w-[33px] h-[33px] rounded-full border-2 border-gray-400 dark:border-gray-900" />
                         )}
                     </DrawerTrigger>
                     <DrawerContent className="dark:bg-gradient-to-t dark:from-neutral-900 dark:to-stone-950 bg-gradient-to-t from-white to-slate-50">

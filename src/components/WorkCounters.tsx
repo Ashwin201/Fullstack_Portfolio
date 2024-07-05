@@ -45,10 +45,11 @@ const WorkCounters = () => {
                     <div className=" col-span-4 sm:col-span-2  w-full order-2 sm:order-3 ">
                         {
                             loader ? (
-                                <h2 className="text-4xl pb-2  font-bold  text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-500 to-neutral-700">2.5+</h2>
+                                <h2 className="text-4xl pb-2  font-bold  text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-500 to-neutral-700">1+</h2>
                             ) : (
 
-                                <h2 className="text-4xl pb-2  font-bold  text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-500 to-neutral-700">{userData?.experience}+</h2>
+                                <h2 className="text-4xl pb-2  font-bold  text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-500 to-neutral-700">
+                                    {userData?.experience}+</h2>
 
                             )
                         }

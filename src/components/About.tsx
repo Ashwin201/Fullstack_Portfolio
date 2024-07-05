@@ -129,7 +129,7 @@ const About = () => {
                     <TabsTrigger value="education" className=' text-lg font-medium py-2 px-8'>Education</TabsTrigger>
                     <TabsTrigger value="experience" className=' text-lg font-medium py-2 px-8'>Experience</TabsTrigger>
                 </TabsList>
-                <TabsContent value="education" className=' flex flex-col justify-center items-center outline-none border-none focus:outline-none hover:border-none focus:border-none p-3'>
+                <TabsContent value="education" className=' flex flex-col justify-center items-center outline-none border-none focus:outline-none hover:border-none focus:border-none px-5 pt-3'>
                     <div className="flex flex-col text-start sm:px-20 ">
                         <div className=" border-l-[3px] border-gray-600 dark:border-gray-400   ">
                             <div className="relative ml-[30px] sm:ml-[65px] mb-16 mt-[-2px]">
@@ -165,7 +165,7 @@ const About = () => {
                         </div>
                     </div>
                 </TabsContent>
-                <TabsContent value="experience" className=' -mt-6 flex flex-col  justify-center items-center outline-none border-none focus:outline-none hover:border-none focus:border-none p-3'>
+                <TabsContent value="experience" className=' -mt-6 flex flex-col  justify-center items-center outline-none border-none focus:outline-none hover:border-none focus:border-none pt-5 px-5'>
 
                     {
                         loading ? (

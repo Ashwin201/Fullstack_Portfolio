@@ -21,6 +21,6 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/mongodb/database.js", "src/app/api/sendEmail/route.js", "src/app/api/sendEmail/route.js", "src/app/api/models/About.js"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/mongodb/database.js", "src/app/api/sendEmail/route.js", "src/app/api/sendEmail/route.js", "src/app/api/models/About.js", "src/app/api/auth/[...nextauth]/route.js"],
   "exclude": ["node_modules"]
 }
