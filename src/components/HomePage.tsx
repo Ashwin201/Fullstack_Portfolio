@@ -1,7 +1,7 @@
 "use client";
 
 import { useScroll, useTransform } from "framer-motion";
-import React, { useEffect, useRef } from "react";
+import React, { useRef } from "react";
 import { GoogleGeminiEffect } from "./ui/google-gemini-effect";
 import WorkCounters from "./WorkCounters";
 import About from "./About";
@@ -9,8 +9,6 @@ import Services from "./Services";
 import Skills from "./Skills";
 import Project from "./Project";
 import Contact from "./Contact";
-import Footer from "./Footer";
-import { ScrollToTop } from "./ScrollToTop";
 
 function HomePage() {
 
@@ -48,7 +46,6 @@ function HomePage() {
       <Skills />
       <Project />
       <Contact />
-      <Footer />
 
     </>
 

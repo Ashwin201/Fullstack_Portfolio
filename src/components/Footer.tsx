@@ -7,7 +7,7 @@ import { navMenu } from './Navbar'
 const Footer = () => {
     return (
         <>
-            <footer className='pt-8 mt-14 flex flex-col items-center justify-center w-full  border-t'>
+            <footer className='pt-8 mt-14 flex flex-col items-center justify-center w-full  border-t px-3 sm:px-6'>
                 <div className=" grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10  w-full ">
                     <div className=" col-span-1 flex flex-col items-start justify-start gap-3">
                         <Link href="/" className="flex items-start gap-2 ">
@@ -64,7 +64,7 @@ const Footer = () => {
                     </div>
                 </div>
             </footer>
-            <div className=" mt-8 mx-auto text-base font-medium text-gray-600 dark:text-gray-400">&copy; 2024 Ashmin Sharma. All rights reserved.</div>
+            <div className=" mt-8 pb-3  px-3 sm:px-8 text-base text-center font-medium text-gray-600 dark:text-gray-400">&copy; 2024 Ashmin Sharma. All rights reserved.</div>
         </>
     )
 }
