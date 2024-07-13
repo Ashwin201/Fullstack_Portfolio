@@ -62,7 +62,7 @@ const SidebarContent = () => {
 
             <div className=" flex flex-col gap-3 mt-2 px-4 w-full">
                 <Button variant={"secondary"}  >
-                    <Link href={"#Contact"} aria-label="Get In Touch" className=" flex items-center gap-2 text-base font-medium" >
+                    <Link href={"mailto:ashminsharma203@gmail.com"} aria-label="Get In Touch" className=" flex items-center gap-2 text-base font-medium" >
                         <CircleUser size={22} /> Get In Touch
                     </Link>
                 </Button>

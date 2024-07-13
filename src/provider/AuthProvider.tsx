@@ -3,7 +3,6 @@ import { SessionProvider } from "next-auth/react";
 import React, { ReactNode } from "react";
 import { Session } from "next-auth";
 import DesktopSidebar from "@/components/DesktopSidebar";
-import { ScrollToTop } from "@/components/ScrollToTop";
 import { usePathname } from "next/navigation";
 import { AboutProvider } from "@/context/AboutProvider";
 
@@ -26,7 +25,6 @@ const AuthProvider: React.FC<AuthProviderProps> = ({ children, session }) => {
           {children}
         </div>
       </div>
-      <ScrollToTop />
     </AboutProvider>
 
   </SessionProvider>;

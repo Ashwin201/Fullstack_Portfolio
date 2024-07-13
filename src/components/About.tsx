@@ -111,7 +111,7 @@ const About = () => {
                         <Button variant={"secondary"}
                         >
                             <Link
-                                href="#Contact"
+                                 href={"mailto:ashminsharma203@gmail.com"}
                                 aria-label="Contact"
                                 className="flex items-center gap-2 justify-center py-[6px] w-fit max-[360px]:w-full    px-2 sm:px-4 text-sm "
                             >
