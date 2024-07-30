@@ -81,15 +81,15 @@ const Navbar = () => {
                                         <Link
                                             key={navItem?.id}
                                             href={`#${navItem?.href}`}
-                                            className="text-gray-700 dark:text-gray-300 text-base font-medium flex gap-1 items-center"
+                                            className="text-gray-700 dark:text-gray-300 text-base font-medium flex gap-1.5 items-center"
                                             aria-label='Path Names'
                                         >
-                                            {navItem?.pathName === "Home" && <House size={20} /> ||
-                                                navItem?.pathName === "About" && <Info size={20} /> ||
+                                            {navItem?.pathName === "Home" && <House size={18} /> ||
+                                                navItem?.pathName === "About" && <Info size={18} /> ||
                                                 navItem?.pathName === "Services" && <HandHelping size={20} /> ||
-                                                navItem?.pathName === "Skills" && <MessageSquareCode size={20} /> ||
-                                                navItem?.pathName === "Projects" && <FolderKanban size={20} /> ||
-                                                navItem?.pathName === "Contact" && <CircleUserRound size={20} />} {navItem?.pathName}
+                                                navItem?.pathName === "Skills" && <MessageSquareCode size={18} /> ||
+                                                navItem?.pathName === "Projects" && <FolderKanban size={18} /> ||
+                                                navItem?.pathName === "Contact" && <CircleUserRound size={19} />} {navItem?.pathName}
                                         </Link>
                                     ))
                                 }

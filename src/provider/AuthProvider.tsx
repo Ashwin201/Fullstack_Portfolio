@@ -5,7 +5,6 @@ import { Session } from "next-auth";
 import DesktopSidebar from "@/components/DesktopSidebar";
 import { usePathname } from "next/navigation";
 import { AboutProvider } from "@/context/AboutProvider";
-import Footer from "@/components/Footer";
 
 interface AuthProviderProps {
   children: ReactNode;
@@ -24,8 +23,6 @@ const AuthProvider: React.FC<AuthProviderProps> = ({ children, session }) => {
         </div>
         <div className={`col-span-9 ${pathname.startsWith("/admin") ? "lg:col-span-9" : "lg:col-span-7"}  overflow-auto `}>
           {children}
-          <Footer />
-
         </div>
       </div>
     </AboutProvider>

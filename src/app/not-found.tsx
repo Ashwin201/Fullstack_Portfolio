@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function NotFound() {
   return (
-    <div className="flex items-center justify-center  flex-col gap-4 px-4 md:px-6">
+    <div className=" relative top-0 left-0 right-0 bottom-0 flex items-center justify-center  flex-col gap-4 px-4 md:px-6 w-full h-screen overflow-hidden ">
       <div className="flex flex-col items-center justify-center gap-6  text-center">
         <FileIcon className="h-24 w-24" />
         <div className="space-y-4 text-center">

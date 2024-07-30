@@ -21,22 +21,17 @@ export const GoogleGeminiEffect = ({
 }) => {
     return (
         <div className={cn("sticky top-20  md:top-[120px]", className)}>
-            <motion.h1
-                className="text-[46px] sm:text-5xl lg:text-6xl font-bold  text-center bg-clip-text xl:mt-4 text-transparent bg-gradient-to-b from-neutral-500 to-neutral-700"
-                initial={{ paddingTop: "-20px", opacity: 0.1 }}
-                animate={{ paddingTop: "0px", opacity: 1 }}
-                transition={{ duration: 0.8 }}
-            >
-                Turning Vision into Reality with <br />Code and Design
-            </motion.h1>
+            <AnimatedText text={"Turning Vision into Reality with  "} text1={"Code and Design"}
+                className="text-[46px] sm:text-5xl lg:text-6xl font-bold  text-center bg-clip-text xl:mt-4 text-transparent bg-gradient-to-b from-neutral-500 to-neutral-700" />
             <motion.p
                 className="text-base  md:text-xl font-medium text-center text-gray-600 dark:text-gray-500 mt-6 xl:mt-8   sm:px-10 md:px-16 lg:px-28 mx-auto mb-14 block "
-                initial={{ paddingBottom: "-20px", opacity: 0.1 }}
-                animate={{ paddingBottom: "0px", opacity: 1 }}
+                initial={{ opacity: 0.1 }}
+                animate={{ opacity: 1 }}
                 transition={{ duration: 0.8 }}
             >
                 Explore my portfolio to gain a comprehensive understanding of my skills, expertise, and extensive professional experience.
             </motion.p>
+
 
             <div className="w-full h-[890px] -top-[165px]  md:-top-[115px] 2xl:-top-[110px]  flex items-center justify-center bg-red-transparent absolute ">
                 <button className="font-bold bg-white rounded-full md:px-4 md:py-2 px-2 py-1 md:mt-24 mt-8 z-30 md:text-base text-black text-xs  w-fit mx-auto ">

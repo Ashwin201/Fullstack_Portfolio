@@ -6,8 +6,8 @@ const AnimatedText = (props: any) => {
     <div>
       <motion.h1
         className={`text-center  font-bold text-2xl min-[320px]:text-4xl sm:text-[55px] lg:text-[60px] ${props.className}`}
-        initial={{ scale: .5, opacity: 0.1 }}
-        animate={{ scale: 1, opacity: 1 }}
+        initial={{ opacity: 0.1 }}
+        animate={{ opacity: 1 }}
         transition={{ duration: 0.8 }}
       >
         {props.text}
