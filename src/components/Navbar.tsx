@@ -75,16 +75,21 @@ const Navbar = () => {
                 <div className="w-full flex-1">
                     <div className=" hidden lg:flex h-16 items-center gap-4  justify-between  ">
                         <nav >
-                            <ul className="hidden flex-col gap-6 text-lg font-medium lg:flex lg:flex-row lg:items-center  lg:text-sm lg:gap-5">
+                            <ul className="hidden flex-col gap-6 text-lg font-medium lg:flex lg:flex-row lg:items-center  lg:text-sm lg:gap-5 xl:gap-7">
                                 {
                                     navMenu?.map((navItem: any) => (
                                         <Link
                                             key={navItem?.id}
                                             href={`#${navItem?.href}`}
-                                            className="text-gray-700 dark:text-gray-300 text-base font-medium"
+                                            className="text-gray-700 dark:text-gray-300 text-base font-medium flex gap-1 items-center"
                                             aria-label='Path Names'
                                         >
-                                            {navItem?.pathName}
+                                            {navItem?.pathName === "Home" && <House size={20} /> ||
+                                                navItem?.pathName === "About" && <Info size={20} /> ||
+                                                navItem?.pathName === "Services" && <HandHelping size={20} /> ||
+                                                navItem?.pathName === "Skills" && <MessageSquareCode size={20} /> ||
+                                                navItem?.pathName === "Projects" && <FolderKanban size={20} /> ||
+                                                navItem?.pathName === "Contact" && <CircleUserRound size={20} />} {navItem?.pathName}
                                         </Link>
                                     ))
                                 }

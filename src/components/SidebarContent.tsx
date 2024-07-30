@@ -27,7 +27,7 @@ const SidebarContent = () => {
                 Haryana, India
             </p>
 
-            <p className="  text-base font-medium text-gray-600 dark:text-gray-400 text-center px-2 md:px-16  lg:px-2">
+            <p className="  text-base lg:text-[15px] font-medium text-gray-600 dark:text-gray-400 text-center px-2 md:px-16  lg:px-2">
                 As a full-stack developer, I specialize in transforming creative
                 ideas into innovative web applications. With a touch of pixel magic,
                 I craft visually stunning and responsive websites.

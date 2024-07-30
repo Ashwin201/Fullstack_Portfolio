@@ -18,11 +18,11 @@ const AuthProvider: React.FC<AuthProviderProps> = ({ children, session }) => {
   return <SessionProvider session={session}>
 
     <AboutProvider>
-      <div className="grid grid-cols-12 h-screen">
-        <div className={`lg:col-span-3 overflow-hidden hidden lg:block ${pathname.startsWith("/admin") && "hidden"} `}>
+      <div className="grid grid-cols-9 h-screen">
+        <div className={`lg:col-span-2 overflow-hidden hidden lg:block ${pathname.startsWith("/admin") && "hidden"} `}>
           <DesktopSidebar />
         </div>
-        <div className={`col-span-12 ${pathname.startsWith("/admin") ? "lg:col-span-12" : "lg:col-span-9"}  overflow-auto `}>
+        <div className={`col-span-9 ${pathname.startsWith("/admin") ? "lg:col-span-9" : "lg:col-span-7"}  overflow-auto `}>
           {children}
           <Footer />
 

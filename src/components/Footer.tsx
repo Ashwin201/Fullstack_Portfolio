@@ -4,11 +4,13 @@ import React from 'react'
 import { FaGithub, FaInstagram, FaLinkedin } from 'react-icons/fa'
 import logo from "../../public/images/logo.webp"
 import { navMenu } from './Navbar'
+import { usePathname } from 'next/navigation'
 const Footer = () => {
+    const pathname = usePathname()
     return (
         <>
             <footer className='pt-8 mt-14 flex flex-col items-center justify-center w-full  border-t px-3 sm:px-6'>
-                <div className=" grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10  w-full ">
+                <div className={`" grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10  w-full ${pathname.startsWith("/admin") && "hidden"}"`}>
                     <div className=" col-span-1 flex flex-col items-start justify-start gap-3">
                         <Link href="/" className="flex items-start gap-2 ">
                             <Image src={logo} alt="Logo" className=" w-[30px] h-[30px] rounded-md " />
@@ -63,8 +65,8 @@ const Footer = () => {
                         </div>
                     </div>
                 </div>
+                <div className=" mt-8 pb-3  px-3 sm:px-8 text-base text-center font-medium text-gray-600 dark:text-gray-400">&copy; 2024 Ashmin Sharma. All rights reserved.</div>
             </footer>
-            <div className=" mt-8 pb-3  px-3 sm:px-8 text-base text-center font-medium text-gray-600 dark:text-gray-400">&copy; 2024 Ashmin Sharma. All rights reserved.</div>
         </>
     )
 }
