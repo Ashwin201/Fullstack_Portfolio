@@ -49,7 +49,7 @@ const Login = () => {
 
     return (
         <>
-            <section className=" my-12  w-full min-h-[90vh] flex justify-center items-center ">
+            <section className=" my-12  w-full min-h-[100vh] lg:min-h-[85vh] flex justify-center items-center ">
                 <div className="lg:grid  lg:grid-cols-12">
                     <aside className="   flex lg:justify-start justify-center  lg:col-span-5 w-full  xl:col-span-6">
                         <img
@@ -61,7 +61,7 @@ const Login = () => {
 
                     <main className="flex items-center justify-center  lg:col-span-7 xl:col-span-6  mt-12  lg:mt-0 ">
                         <div className="max-w-xl lg:max-w-3xl">
-                            <Link href="/about" aria-label="HomePage">
+                            <Link href="/" aria-label="HomePage">
                                 <Image src={logo} className=" h-10 w-auto " alt="Logo" />
                             </Link>
 
