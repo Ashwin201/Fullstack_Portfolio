@@ -51,15 +51,15 @@ const Login = () => {
         <>
             <section className=" my-12  w-full min-h-[90vh] flex justify-center items-center ">
                 <div className="lg:grid  lg:grid-cols-12">
-                    <aside className="relative h-16 ml-8 xl:ml-12 flex lg:order-last lg:col-span-5 lg:h-full xl:col-span-6">
+                    <aside className="   flex lg:justify-start justify-center  lg:col-span-5 w-full  xl:col-span-6">
                         <img
                             src="https://www.hit4hit.org/img/login/user-icon-6.png"
                             alt="Login"
-                            className="absolute  h-full w-full object-fill"
+                            className=" h-auto w-full min-[500px]:w-96  object-fill"
                         />
                     </aside>
 
-                    <main className="flex items-center justify-center  lg:col-span-7 xl:col-span-6 lg:mr-12  ">
+                    <main className="flex items-center justify-center  lg:col-span-7 xl:col-span-6  mt-12  lg:mt-0 ">
                         <div className="max-w-xl lg:max-w-3xl">
                             <Link href="/about" aria-label="HomePage">
                                 <Image src={logo} className=" h-10 w-auto " alt="Logo" />
@@ -69,7 +69,7 @@ const Login = () => {
                 Login to EZShop
               </h1> */}
 
-                            <p className="text-2xl font-bold text-gray-800 dark:text-gray-400 mt-6">
+                            <p className=" text-xl sm:text-2xl font-bold bg-clip-text  text-transparent bg-gradient-to-b from-neutral-500 to-neutral-700 mt-6">
                                 Authenticate to gain access to the frontend system as an
                                 administrator in order to securely manage and update data.
                             </p>
