@@ -3,6 +3,7 @@ import { cn } from "@/lib/utils";
 import { motion, MotionValue } from "framer-motion";
 import React from "react";
 import AnimatedText from "../AnimatedText";
+import dynamic from "next/dynamic";
 const transition = {
     duration: 1,
     ease: "linear",
@@ -21,6 +22,7 @@ export const GoogleGeminiEffect = ({
 }) => {
     return (
         <div className={cn("sticky top-20  md:top-[120px]", className)}>
+
             <AnimatedText text={"Turning Vision into Reality with  "} text1={"Code and Design"}
                 className="text-[46px] sm:text-5xl lg:text-6xl font-bold  text-center bg-clip-text xl:mt-4 text-transparent bg-gradient-to-b from-neutral-500 to-neutral-700" />
             <motion.p

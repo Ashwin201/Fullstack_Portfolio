@@ -12,6 +12,7 @@ import Image from "next/image"
 import HomePage from "./HomePage"
 import WorkCounters from "./WorkCounters"
 import Footer from "./Footer"
+import { ScrollToTop } from "./ScrollToTop"
 
 function LandingPage() {
     return (
@@ -21,8 +22,9 @@ function LandingPage() {
 
             <main className=" h-fit flex flex-1 flex-col gap-4  lg:gap-6 lg:p-6 overflow-auto">
                 <HomePage />
+                <Footer />
             </main>
-            <Footer />
+            <ScrollToTop />
         </div>
     )
 }

@@ -9,6 +9,7 @@ import { CircleUser, FolderDown } from 'lucide-react';
 import { Skeleton } from './ui/skeleton';
 import ExperienceSkeleton from './Skeletons/ExperienceSkeleton';
 import { useAbout } from '@/context/AboutProvider';
+import dynamic from 'next/dynamic';
 
 const About = () => {
     const [data, setData] = useState<any>([]);
@@ -38,11 +39,18 @@ const About = () => {
     }, []);
     return (
         <div id='About' className=' pt-12 mt-10 sm:mt-14 flex flex-col w-full justify-center items-center'>
-            <h3 className=" pb-10  text-4xl sm:text-5xl text-center mb-3  font-bold   bg-clip-text text-transparent bg-gradient-to-b from-neutral-500 to-neutral-700">
+            <h3 className=" pb-8  text-4xl sm:text-5xl text-center mb-3  font-bold   bg-clip-text text-transparent bg-gradient-to-b from-neutral-500 to-neutral-700">
                 Know More <br className=' sm:hidden' /> About Me
             </h3>
             <div className="  col-span-2 items-center flex flex-col justify-center xl:-mt-3 align-start text-center  mb-20  ">
-                <div className="font-bold text-[28px] bg-clip-text text-transparent bg-gradient-to-b from-neutral-500 to-neutral-700">
+                <PlayerWithNoSSR
+                    autoplay
+                    loop
+                    src={`/developer.json`}
+
+                    className={` ml-5 min-[450px]:-ml-5 h-[300px] w-auto flex w items-center `}
+                />
+                <div className="font-bold text-[28px] bg-clip-text text-transparent bg-gradient-to-b -mt-3 from-neutral-500 to-neutral-700">
                     {userData?.role ? userData?.role : " Full Stack Developer"}
                 </div>
                 <div className="mt-6 text-base text-gray-600 dark:text-gray-300 font-medium px-1">
@@ -111,7 +119,7 @@ const About = () => {
                         <Button variant={"secondary"}
                         >
                             <Link
-                                 href={"mailto:ashminsharma203@gmail.com"}
+                                href={"mailto:ashminsharma203@gmail.com"}
                                 aria-label="Contact"
                                 className="flex items-center gap-2 justify-center py-[6px] w-fit max-[360px]:w-full    px-2 sm:px-4 text-sm "
                             >
@@ -214,3 +222,7 @@ const About = () => {
 }
 
 export default About
+const PlayerWithNoSSR = dynamic(
+    () => import('@lottiefiles/react-lottie-player').then(module => module.Player),
+    { ssr: false }
+);
