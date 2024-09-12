@@ -22,7 +22,7 @@ export const GoogleGeminiEffect = ({
 }) => {
     return (
         <div className={cn("sticky top-20  md:top-[120px]", className)}>
-
+           
             <AnimatedText text={"Turning Vision into Reality with  "} text1={"Code and Design"}
                 className="text-[46px] sm:text-5xl lg:text-6xl font-bold  text-center bg-clip-text xl:mt-4 text-transparent bg-gradient-to-b from-neutral-500 to-neutral-700" />
             <motion.p

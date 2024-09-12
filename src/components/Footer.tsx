@@ -55,7 +55,7 @@ const Footer = () => {
                                 navMenu?.map((navItem) => (
                                     <Link
                                         key={navItem?.id}
-                                        href={`${navItem?.href}`}
+                                        href={`#${navItem?.href}`}
                                         className="text-muted-foreground transition-colors hover:text-foreground text-base font-medium lg:text-center"
                                         aria-label='Path Names'
                                     >
@@ -65,7 +65,6 @@ const Footer = () => {
                             }
                         </div>
                     </div>
-                    <div className="   col-span-1 mb-3  sm:col-span-2 lg:col-span-3  px-3 sm:px-8 text-base text-center font-medium text-gray-600 dark:text-gray-400">&copy; 2023 Ashmin Sharma. All rights reserved.</div>
                 </div>
             </footer>
         </>
