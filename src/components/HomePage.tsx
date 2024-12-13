@@ -22,7 +22,6 @@ function HomePage() {
 
   return (
     <>
-
       <div className=" flex md:flex-row md:gap-8  py-4 pb-8 sm:py-14 flex-col items-center md:items-start justify-center md:mx-10">
         <PlayerWithNoSSR
           autoplay
@@ -35,13 +34,13 @@ function HomePage() {
 
           <h1 className=" text-[28px] min-[500px]:text-[40px]  font-bold  text-center md:text-start bg-clip-text xl:mt-4 text-transparent bg-gradient-to-b from-neutral-500 to-neutral-700 ">
             Hi, I&apos;m  Ashmin Sharma
-            <span className=" text-yellow-500 text-[25px] min-[500px]:text-[33px] pl-1">👋</span>
+            <span className=" text-yellow-500 text-[25px] min-[500px]:text-[33px] pl-2">👋</span>
           </h1>
 
 
           <p className=" mb-4 font-medium text-base dark:text-gray-400 text-gray-600 mt-4 text-center md:text-start ">
             {/* Explore my portfolio to gain a comprehensive understanding of my skills, expertise, and extensive professional experience. */}
-            A Full-stack developer passionate about building seamless web applications. Skilled in crafting intuitive front-end designs and robust back-end systems.
+            A full-stack developer passionate about building seamless web applications. Skilled in crafting intuitive front-end designs and robust back-end systems.
             Let&apos;s turn ideas into impactful solutions.
           </p>
           <div className="flex items-center space-x-4 mt-2">

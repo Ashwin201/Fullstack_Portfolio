@@ -28,9 +28,9 @@ const SidebarContent = () => {
             </p>
 
             <p className="  text-base lg:text-[15px] font-medium text-gray-600 dark:text-gray-400 text-center px-2 md:px-16  lg:px-2">
-                As a full-stack developer, I specialize in transforming creative
-                ideas into innovative web applications. With a touch of pixel magic,
-                I craft visually stunning and responsive websites.
+                As a full-stack developer, I specialize in translating creative concepts into cutting-edge web applications.
+                Leveraging my expertise in both front-end and back-end development, I deliver visually captivating and highly
+                responsive websites that align with modern design principles and user experience standards.
             </p>
 
             <nav className=" flex items-center justify-center sm:justify-start mt-1">
