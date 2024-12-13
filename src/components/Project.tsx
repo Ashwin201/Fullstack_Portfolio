@@ -81,7 +81,7 @@ const Project: React.FC = () => {
                     loading ? <CardSkeleton /> : projects?.length > 0 ? (
 
 
-                        <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-12 w-full  ">
+                        <div className="grid grid-cols-1 min-[560px]:grid-cols-2 xl:grid-cols-3 gap-6 sm:gap-12 w-full  ">
                             {projects.slice(0, Index)?.map((item: any, index: number) =>
                                 <Fragment key={index}>
                                     <Card className="  col-span-1  bg-inherit shadow-sm " >

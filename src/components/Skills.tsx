@@ -38,7 +38,7 @@ const Skills = () => {
                 <TabsList className="  flex gap-2 px-2  py-7 mb-10 bg-gray-200 dark:bg-gray-900  w-fit justify-center items-center mx-auto">
                     <TabsTrigger value="Frontend" className=' text-base font-semibold py-2 px-4'>Frontend</TabsTrigger>
                     <TabsTrigger value="Backend" className=' text-base font-semibold py-2 px-4'>Backend</TabsTrigger>
-                    <TabsTrigger value="Tools" className=' text-base font-semibold py-2 px-4'>Tools </TabsTrigger>
+                    <TabsTrigger value="Tools" className=' text-base font-semibold py-2 px-4'>Others </TabsTrigger>
                 </TabsList>
                 <div>
 
@@ -73,7 +73,7 @@ const Skills = () => {
                                     <Reactjs />
                                 </span>
                                 <span className="  font-semibold mt-2 text-text1  text-[12.5px] text-center">
-                                    React
+                                    Reactjs
                                 </span>
                             </div>
                             <div className=" flex flex-col items-center  col-span-1">

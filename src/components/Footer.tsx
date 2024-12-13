@@ -65,6 +65,8 @@ const Footer = () => {
                             }
                         </div>
                     </div>
+                    <p className="   my-3  sm:col-span-2 lg:col-span-3  px-3 sm:px-8 text-base text-center font-medium text-gray-600 dark:text-gray-400">&copy; 2023 Ashmin Sharma. All rights reserved.</p>
+
                 </div>
             </footer>
         </>

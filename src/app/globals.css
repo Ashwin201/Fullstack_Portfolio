@@ -25,10 +25,10 @@ div:active {
 }
 
 /* Custom Css for Scroll bars */
-::-webkit-scrollbar,
+/* ::-webkit-scrollbar,
 .scrollBar {
   width: 0.2rem;
-}
+} */
 /* 
 ::-webkit-scrollbar-track {
   background-color: grey;

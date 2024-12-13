@@ -7,8 +7,8 @@ const WorkCounters = () => {
     const words = ["functional", "beautiful", "modern", "fast"];
     const { userData, loader } = useAbout();
     return (
-        <section className="text-gray-600 body-font -mt-20 md:-mt-6 md:pt-14 ">
-            <div className="container px-5 pt-0 md:pt-12  w-full">
+        <section className="text-gray-600 body-font  ">
+            <div className="container px-5  w-full">
 
                 <div className=" grid grid-cols-8 sm:flex-row justify-between items-center -m-4 text-center gap-10 sm:gap-5 ">
                     <div className=" col-span-4 sm:col-span-2  w-full order-1">

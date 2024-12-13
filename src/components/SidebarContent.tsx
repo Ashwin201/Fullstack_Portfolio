@@ -60,13 +60,13 @@ const SidebarContent = () => {
                 </Link>
             </nav>
 
-            <div className=" flex flex-col gap-3 mt-2 px-4 w-full">
-                <Button variant={"secondary"}  >
-                    <Link href={"mailto:ashminsharma203@gmail.com"} aria-label="Get In Touch" className=" flex items-center gap-2 text-base font-medium" >
+            <div className=" flex justify-center items-center  flex-col min-[400px]:flex-row lg:flex-col  gap-3 mt-2 px-4 w-full">
+                <Button variant={"secondary"} className="w-full" >
+                    <Link href={"mailto:ashminsharma203@gmail.com"} aria-label="Get In Touch" className="  flex items-center gap-2 text-base font-medium" >
                         <CircleUser size={22} /> Get In Touch
                     </Link>
                 </Button>
-                <Button >
+                <Button className=" w-full" >
                     <Link href={`${userData?.resume}`} aria-label="Download CV" className=" flex items-center gap-3 text-base font-medium" >
                         <FolderDown size={22} />  Download CV
                     </Link>

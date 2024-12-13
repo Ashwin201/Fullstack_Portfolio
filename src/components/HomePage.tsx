@@ -1,8 +1,6 @@
 "use client";
 
-import { useScroll, useTransform } from "framer-motion";
 import React, { useEffect, useRef, useState } from "react";
-import { GoogleGeminiEffect } from "./ui/google-gemini-effect";
 import WorkCounters from "./WorkCounters";
 import About from "./About";
 import Services from "./Services";
@@ -10,36 +8,63 @@ import Skills from "./Skills";
 import Project from "./Project";
 import Contact from "./Contact";
 import dynamic from "next/dynamic";
-import { ScrollToTop } from "./ScrollToTop";
-
+import Link from "next/link";
+import { FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
+const PlayerWithNoSSR = dynamic(
+  () => import('@lottiefiles/react-lottie-player').then(module => module.Player),
+  { ssr: false }
+);
 function HomePage() {
-  const ref = useRef(null);
-  const { scrollYProgress } = useScroll({
-    target: ref,
-  });
-  const pathLengthFirst = useTransform(scrollYProgress, [1.2, 1.2], [1.2, 1.2]);
-  const pathLengthSecond = useTransform(scrollYProgress, [1.2, 1.2], [1.2, 1.2]);
-  const pathLengthThird = useTransform(scrollYProgress, [1.2, 1.2], [1.2, 1.2]);
-  const pathLengthFourth = useTransform(scrollYProgress, [1.2, 1.2], [1.2, 1.2]);
-  const pathLengthFifth = useTransform(scrollYProgress, [1.2, 1.2], [1.2, 1.2]);
-
   return (
     <>
-      <div
-        id="Home"
-        className="h-[570px] lg:h-[650px] w-full relative pt-10 md:pt-14 lg:pt-20 overflow-clip"
-        ref={ref}
-      >
-        <GoogleGeminiEffect
-          pathLengths={[
-            pathLengthFirst,
-            pathLengthSecond,
-            pathLengthThird,
-            pathLengthFourth,
-            pathLengthFifth,
-          ]}
+
+      <div className=" flex md:flex-row md:gap-8  py-14 flex-col items-center md:items-start justify-center md:mx-10">
+        <PlayerWithNoSSR
+          autoplay
+          loop
+          src={`/developer.json`}
+
+          className={` h-[280px]  md:h-[260px] md:w-[260px] w-auto `}
         />
+        <div className="flex flex-col items-center justify-center md:justify-start md:items-start md:mt-3  ">
+
+          <h1 className=" text-[28px] min-[500px]:text-[40px]  font-bold  text-center md:text-start bg-clip-text xl:mt-4 text-transparent bg-gradient-to-b from-neutral-500 to-neutral-700 ">
+            Hi, I&apos;m  Ashmin Sharma
+            <span className=" text-yellow-500 text-[25px] min-[500px]:text-[33px]">👋</span>
+          </h1>
+
+
+          <p className=" mb-4 font-medium text-base dark:text-gray-400 text-gray-600 mt-4 text-center md:text-start ">
+            {/* Explore my portfolio to gain a comprehensive understanding of my skills, expertise, and extensive professional experience. */}
+            A Full-stack developer passionate about building seamless web applications. Skilled in crafting intuitive front-end designs and robust back-end systems.
+            Let&apos;s turn ideas into impactful solutions.
+          </p>
+          <div className="flex items-center space-x-4 mt-2">
+            <Link
+              href="https://instagram.com/ashwin.203?igshid=YmMyMTA2M2Y="
+              aria-label="Insta"
+              target="_blank"
+            >
+              <FaInstagram size={26} />
+            </Link>
+            <Link
+              href="https://github.com/Ashwin201"
+              aria-label="Github"
+              target="_blank"
+            >
+              <FaGithub size={26} />
+            </Link>
+            <Link
+              href="https://www.linkedin.com/in/ashmin-sharma-6a4867257"
+              aria-label="Linkedin"
+              target="_blank"
+            >
+              <FaLinkedin size={26} />
+            </Link>
+          </div>
+        </div>
       </div>
+      <br />
       <WorkCounters />
       <About />
       <Services />

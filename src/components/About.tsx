@@ -39,21 +39,21 @@ const About = () => {
     }, []);
     return (
         <div id='About' className=' pt-12 mt-10 sm:mt-14 flex flex-col w-full justify-center items-center'>
-            <h3 className=" pb-8  text-4xl sm:text-5xl text-center mb-3  font-bold   bg-clip-text text-transparent bg-gradient-to-b from-neutral-500 to-neutral-700">
-                Know More <br className=' sm:hidden' /> About Me
+            <h3 className=" pb-12  text-4xl sm:text-5xl text-center mb-3  font-bold   bg-clip-text text-transparent bg-gradient-to-b from-neutral-500 to-neutral-700">
+                Know More  About Me!
             </h3>
             <div className="  col-span-2 items-center flex flex-col justify-center xl:-mt-3 align-start text-center  mb-20  ">
-                <PlayerWithNoSSR
+                {/* <PlayerWithNoSSR
                     autoplay
                     loop
                     src={`/developer.json`}
 
                     className={` ml-5 min-[450px]:-ml-5 h-[300px] w-auto flex w items-center `}
-                />
-                <div className="font-bold text-[28px] bg-clip-text text-transparent bg-gradient-to-b -mt-3 from-neutral-500 to-neutral-700">
+                /> */}
+                <div className="font-bold text-[28px] bg-clip-text text-transparent bg-gradient-to-b  from-neutral-500 to-neutral-700">
                     {userData?.role ? userData?.role : " Full Stack Developer"}
                 </div>
-                <div className="mt-6 text-base text-gray-600 dark:text-gray-300 font-medium px-1">
+                <div className="mt-6 text-base text-gray-600 dark:text-gray-300 font-medium px-1 md:mx-10">
                     {userData?.desc ? userData?.desc?.map((description: any, index: number) => (
                         <p key={index} className=' text-gray-600 dark:text-gray-400 text-base font-medium'>
                             {description}
@@ -140,21 +140,7 @@ const About = () => {
                 <TabsContent value="education" className=' flex flex-col justify-center items-center outline-none border-none focus:outline-none hover:border-none focus:border-none px-5 pt-3'>
                     <div className="flex flex-col text-start sm:px-20 ">
                         <div className=" border-l-[3px] border-gray-600 dark:border-gray-400   ">
-                            <div className="relative ml-[30px] sm:ml-[65px] mb-16 mt-[-2px]">
-                                <div className="  font-bold text-[28px]  bg-clip-text text-transparent bg-gradient-to-b from-neutral-500 to-neutral-700  mb-3">
-                                    High School
-                                </div>
-                                <div className="  text-xl mb-3 font-bold text-gray-600 dark:text-gray-400">2019-2021</div>
-                                <p className=" flex items-start gap-1 font-medium dark:text-gray-400 text-gray-600  text-base">
-                                    I have accomplished my high school education at Government
-                                    Senior Secondary School, Jhajjar, Haryana, specializing in the
-                                    Non-Medical Stream, during the academic session of 2019-2021.
-                                </p>
-                                <span className=" absolute top-0 left-0  flex justify-center align-middle items-center  w-[25px] p-1 h-[25px]  sm:w-[28px] sm:h-[28px] bg-white dark:bg-gray-900  border-gray-600 dark:border-gray-400  border-[3px] -ml-[45px] sm:-ml-[81px] rounded-[50%]">
-                                    <span className="w-[10px] h-[10px] sm:w-[15px] sm:h-[15px] bg-gray-600 dark:bg-gray-400  rounded-[50%]"></span>
-                                </span>
-                            </div>
-                            <div className="relative ml-[30px] sm:ml-[65px] ">
+                            <div className=" relative ml-[30px] sm:ml-[65px] mb-16 mt-[-2px]">
                                 <div className="  font-bold text-[28px]  bg-clip-text text-transparent bg-gradient-to-b from-neutral-500 to-neutral-700 mb-3 mt-[-2px]">
                                     Bachelor&apos;s Degree
                                 </div>
@@ -170,6 +156,21 @@ const About = () => {
                                     <span className="w-[10px] h-[10px] sm:w-[15px] sm:h-[15px] bg-gray-600 dark:bg-gray-400  rounded-[50%]"></span>
                                 </span>
                             </div>
+                            <div className=" relative ml-[30px] sm:ml-[65px] ">
+                                <div className="  font-bold text-[28px]  bg-clip-text text-transparent bg-gradient-to-b from-neutral-500 to-neutral-700  mb-3">
+                                    High School
+                                </div>
+                                <div className="  text-xl mb-3 font-bold text-gray-600 dark:text-gray-400">2019-2021</div>
+                                <p className=" flex items-start gap-1 font-medium dark:text-gray-400 text-gray-600  text-base">
+                                    I have accomplished my high school education at Government
+                                    Senior Secondary School, Jhajjar, Haryana, specializing in the
+                                    Non-Medical Stream, during the academic session of 2019-2021.
+                                </p>
+                                <span className=" absolute top-0 left-0  flex justify-center align-middle items-center  w-[25px] p-1 h-[25px]  sm:w-[28px] sm:h-[28px] bg-white dark:bg-gray-900  border-gray-600 dark:border-gray-400  border-[3px] -ml-[45px] sm:-ml-[81px] rounded-[50%]">
+                                    <span className="w-[10px] h-[10px] sm:w-[15px] sm:h-[15px] bg-gray-600 dark:bg-gray-400  rounded-[50%]"></span>
+                                </span>
+                            </div>
+
                         </div>
                     </div>
                 </TabsContent>
