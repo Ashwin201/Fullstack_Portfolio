@@ -14,7 +14,7 @@ const WorkCounters = () => {
                     <div className=" col-span-4 sm:col-span-2  w-full order-1">
 
                         <h2 className="text-4xl pb-2  font-bold  text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-500 to-neutral-700"> 10+</h2>
-                        <p className="leading-relaxed font-bold text-lg ">Total <br />Projects</p>
+                        <p className="leading-relaxed font-bold text-lg  text-center">Total Projects</p>
                     </div>
 
                     <div className='col-span-8 sm:col-span-4  mt-6 sm:mt-0 flex flex-col items-center justify-center gap-3 rounded-md  order-3 sm:order-2'>
@@ -54,7 +54,7 @@ const WorkCounters = () => {
                             )
                         }
 
-                        <p className="leading-relaxed font-bold text-lg">Years  <br /> Experience</p>
+                        <p className="leading-relaxed font-bold text-lg text-center">Years   Experience</p>
                     </div>
 
 

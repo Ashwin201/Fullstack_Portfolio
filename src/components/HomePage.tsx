@@ -23,7 +23,7 @@ function HomePage() {
   return (
     <>
 
-      <div className=" flex md:flex-row md:gap-8  py-14 flex-col items-center md:items-start justify-center md:mx-10">
+      <div className=" flex md:flex-row md:gap-8  py-4 pb-8 sm:py-14 flex-col items-center md:items-start justify-center md:mx-10">
         <PlayerWithNoSSR
           autoplay
           loop
