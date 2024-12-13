@@ -10,11 +10,16 @@ import Contact from "./Contact";
 import dynamic from "next/dynamic";
 import Link from "next/link";
 import { FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
+import { Button } from "./ui/button";
+import { CircleUser, FolderDown } from "lucide-react";
+import { useAbout } from "@/context/AboutProvider";
 const PlayerWithNoSSR = dynamic(
   () => import('@lottiefiles/react-lottie-player').then(module => module.Player),
   { ssr: false }
 );
 function HomePage() {
+  const { userData, loader } = useAbout();
+
   return (
     <>
 
@@ -24,13 +29,13 @@ function HomePage() {
           loop
           src={`/developer.json`}
 
-          className={` h-[280px]  md:h-[260px] md:w-[260px] w-auto `}
+          className={` h-[300px]  md:h-[260px] md:w-[260px] w-auto `}
         />
         <div className="flex flex-col items-center justify-center md:justify-start md:items-start md:mt-3  ">
 
           <h1 className=" text-[28px] min-[500px]:text-[40px]  font-bold  text-center md:text-start bg-clip-text xl:mt-4 text-transparent bg-gradient-to-b from-neutral-500 to-neutral-700 ">
             Hi, I&apos;m  Ashmin Sharma
-            <span className=" text-yellow-500 text-[25px] min-[500px]:text-[33px]">👋</span>
+            <span className=" text-yellow-500 text-[25px] min-[500px]:text-[33px] pl-1">👋</span>
           </h1>
 
 
@@ -61,6 +66,34 @@ function HomePage() {
             >
               <FaLinkedin size={26} />
             </Link>
+          </div>
+          <div className="flex justify-center xl:justify-start mt-7 lg:hidden">
+            <ul className="flex max-[360px]:flex-col-reverse flex-row font-medium max-[300px]:flex-col gap-4 ">
+              <Button variant={"secondary"}
+              >
+                <Link
+                  href={"mailto:ashminsharma203@gmail.com"}
+                  aria-label="Contact"
+                  className="flex items-center gap-2 justify-center py-[6px] w-fit max-[360px]:w-full    px-2 sm:px-4 text-sm "
+                >
+                  <CircleUser size={22} />  Get in Touch
+                </Link>
+              </Button>
+              <Button>
+                <Link
+                  target="_blank"
+                  aria-label="Resume"
+                  href={`${userData?.resume}`}
+                  className=" flex items-center gap-2  text-center justify-center   py-[6px] w-fit max-[360px]:w-full  px-2 sm:px-4 text-sm "
+                >
+                  <FolderDown size={22} />  Download CV
+                  {/* <span className="ml-2">
+                    <RiFolderDownloadFill size={25} className="" />
+                </span> */}
+                </Link>
+              </Button>
+
+            </ul>
           </div>
         </div>
       </div>
