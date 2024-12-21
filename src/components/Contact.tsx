@@ -82,7 +82,7 @@ const Contact = () => {
                         Get In Touch
                     </AnimateOnVisible>
                     <AnimateOnVisible animation={"slideRight"} duration={1.0} className=' text-base text-gray-600 font-medium dark:text-gray-400'>
-                        Let's connect and discuss things in more detail.
+                        Let&apos;s connect and discuss things in more detail.
                     </AnimateOnVisible>
                 </div>
                 <div className="md:grid gap-14 md:grid-cols-12">
