@@ -15,7 +15,7 @@ const Services = () => {
                     What I Provide
                 </h3>
                 <p className=' text-base text-gray-600 font-medium dark:text-gray-400'>
-                    Know in detail what I offer and how I can help you
+                    Know in detail what I offer and how I can help you.
                 </p>
             </div>
             <div className="  grid grid-cols-1 min-[620px]:grid-cols-2  gap-14 min-[580px]:gap-12 md:gap-12 px-2">
