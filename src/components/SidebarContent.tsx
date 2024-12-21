@@ -37,7 +37,7 @@ const SidebarContent = () => {
                 responsive websites that align with modern design principles and user experience standards.
             </AnimateOnVisible>
 
-            <AnimateOnVisible animation={"slideUp"} duration={0.8} className=" flex items-center justify-center sm:justify-start mt-1">
+            <nav className=" flex items-center justify-center sm:justify-start mt-1">
                 <Link
                     href="https://instagram.com/ashwin.203?igshid=YmMyMTA2M2Y="
                     className="mr-3 text-gray-900 dark:text-gray-300"
@@ -62,7 +62,7 @@ const SidebarContent = () => {
                 >
                     <FaLinkedin size={25} />
                 </Link>
-            </AnimateOnVisible>
+            </nav>
 
             <div className=" flex justify-center items-center  flex-col min-[400px]:flex-row lg:flex-col  gap-3 mt-2 px-4 w-full">
                 <Button variant={"secondary"} className="w-full" >
