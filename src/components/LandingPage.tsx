@@ -19,7 +19,6 @@ function LandingPage() {
 
         <div className="flex flex-col px-4">
             <Navbar />
-
             <main className=" h-fit flex flex-1 flex-col gap-4  lg:gap-6 lg:p-6 overflow-auto">
                 <HomePage />
                 <Footer />

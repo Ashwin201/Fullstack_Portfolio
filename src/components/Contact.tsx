@@ -78,12 +78,12 @@ const Contact = () => {
         <>
             <section id="Contact" className='pt-6 mt-8 flex flex-col  col-span-1 w-full'>
                 <div className=' mb-12  '>
-                    <AnimateOnVisible animation={"slideRight"} duration={0.8} className=" text-4xl sm:text-[44px] mb-3  font-bold   bg-clip-text text-transparent bg-gradient-to-b from-neutral-500 to-neutral-700">
+                    <h3 className=" text-4xl sm:text-[44px] mb-3  font-bold   bg-clip-text text-transparent bg-gradient-to-b from-neutral-500 to-neutral-700">
                         Get In Touch
-                    </AnimateOnVisible>
-                    <AnimateOnVisible animation={"slideRight"} duration={1.0} className=' text-base text-gray-600 font-medium dark:text-gray-400'>
+                    </h3>
+                    <p className=' text-base text-gray-600 font-medium dark:text-gray-400'>
                         Let&apos;s connect and discuss things in more detail.
-                    </AnimateOnVisible>
+                    </p>
                 </div>
                 <div className="md:grid gap-14 md:grid-cols-12">
                     <AnimateOnVisible animation={"slideRight"} duration={1.0} className=" hidden md:flex md:order-last md:col-span-5  xl:col-span-6">
@@ -98,26 +98,26 @@ const Contact = () => {
 
                     <div className="flex  md:col-span-7 xl:col-span-6   w-full   ">
                         <div className=" lg:max-w-3xl">
-                            <AnimateOnVisible animation={"slideRight"} duration={0.8} className=" flex items-center 
+                            <div className=" flex items-center 
                                 text-center gap-[10px] font-semibold text-[24px] min-w-[345px]:text-3xl bg-clip-text text-transparent bg-gradient-to-b from-neutral-500 to-neutral-700">
                                 Send me a Message{" "}
                                 <MdMarkEmailUnread size={30} className="mt-1" />
-                            </AnimateOnVisible>
+                            </div>
                             <Link
                                 href={"mailto:ashminsharma203@gmail.com"}
                                 aria-label="Email"
                                 className="my-4 flex gap-2 items-end "
                             >
                                 <FaMailBulk size={25} /> :{" "}
-                                <AnimateOnVisible animation={"slideRight"} duration={0.9} className="underline text-base font-medium">
+                                <span className="underline text-base font-medium">
                                     ashminsharma203@gmail.com
-                                </AnimateOnVisible>
+                                </span>
                             </Link>
 
-                            <AnimateOnVisible animation={"slideRight"} duration={0.9} className="leading-relaxed text-gray-600 font-medium dark:text-gray-400">
+                            <p className="leading-relaxed text-gray-600 font-medium dark:text-gray-400">
                                 Connect with me! Feel free to reach out for collaboration,
                                 opportunities, or just a friendly chat.
-                            </AnimateOnVisible>
+                            </p>
 
                             <form
                                 action="#"
@@ -211,18 +211,16 @@ const Contact = () => {
                                         </span>
                                     </label>
                                 </AnimateOnVisible>
-                                <AnimateOnVisible animation={"slideUp"} duration={0.9}>
-                                    <button
-                                        type="submit"
-                                        className=" flex gap-2  items-center text-center w-fit py-[6px] px-3 pr-4 text-base  font-semibold  rounded-md bg-black dark:bg-[#f8f9fa] text-white dark:text-black  border-solid border-2 border-black
+                                <button
+                                    type="submit"
+                                    className=" flex gap-2  items-center text-center w-fit py-[6px] px-3 pr-4 text-base  font-semibold  rounded-md bg-black dark:bg-[#f8f9fa] text-white dark:text-black  border-solid border-2 border-black
          dark:border-white  hover:scale-95 transition-all duration-300 ease-in-out max-[300px]:mr-0 max-[300px]:mb-3"
-                                    >
-                                        <span>
-                                            <BsSendFill size={18} />
-                                        </span>
-                                        Submit
-                                    </button>
-                                </AnimateOnVisible>
+                                >
+                                    <span>
+                                        <BsSendFill size={18} />
+                                    </span>
+                                    Submit
+                                </button>
                             </form>
                             {error && (
                                 <p className="text-sm font-medium py-1 px-2 text-white rounded-md w-fit bg-red-600 mt-4">
@@ -232,7 +230,7 @@ const Contact = () => {
                         </div>
                     </div>
                 </div>
-            </section>
+            </section >
         </>
     );
 };

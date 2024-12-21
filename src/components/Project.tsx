@@ -76,12 +76,12 @@ const Project: React.FC = () => {
         <>
             <div id="Projects" className='pt-6 mt-10 flex flex-col  col-span-1  w-full'>
                 <div className=' mb-12  '>
-                    <AnimateOnVisible animation={"slideRight"} duration={0.8} className=" text-4xl sm:text-[44px] mb-3  font-bold   bg-clip-text text-transparent bg-gradient-to-b from-neutral-500 to-neutral-700">
+                    <h3 className=" text-4xl sm:text-[44px] mb-3  font-bold   bg-clip-text text-transparent bg-gradient-to-b from-neutral-500 to-neutral-700">
                         Featured Works
-                    </AnimateOnVisible>
-                    <AnimateOnVisible animation={"slideRight"} duration={1.0} className=' text-base text-gray-600 font-medium dark:text-gray-400 '>
+                    </h3>
+                    <p className=' text-base text-gray-600 font-medium dark:text-gray-400 '>
                         Take a look at the projects I have created and developed over time.
-                    </AnimateOnVisible>
+                    </p>
                 </div>
                 {
                     loading ? <CardSkeleton /> : projects?.length > 0 ? (

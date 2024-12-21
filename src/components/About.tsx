@@ -41,12 +41,12 @@ const About = () => {
     return (
         <div id='About' className=' mt-16 flex flex-col w-full justify-start items-start'>
             <div className=' mb-12  '>
-                <AnimateOnVisible animation={"slideRight"} duration={0.8} className=" text-4xl sm:text-[44px] mb-3  font-bold   bg-clip-text text-transparent bg-gradient-to-b from-neutral-500 to-neutral-700">
+                <h3 className=" text-4xl sm:text-[44px] mb-3  font-bold   bg-clip-text text-transparent bg-gradient-to-b from-neutral-500 to-neutral-700">
                     Who I Am
-                </AnimateOnVisible>
-                <AnimateOnVisible animation={"slideRight"} duration={1.0} className=' text-base text-gray-600 font-medium dark:text-gray-400 '>
+                </h3>
+                <p className=' text-base text-gray-600 font-medium dark:text-gray-400 '>
                     Get to know me in a more detailed & insightful way.
-                </AnimateOnVisible>
+                </p>
             </div>
             <div className="  col-span-2  flex flex-col justify-start xl:-mt-3 align-start   mb-16  ">
                 {/* <PlayerWithNoSSR
@@ -139,12 +139,12 @@ const About = () => {
 
             <div className=' flex flex-col justify-start items-start outline-none border-none focus:outline-none hover:border-none focus:border-none  pt-3'>
                 <div className=' mb-12  '>
-                    <AnimateOnVisible animation={"slideRight"} duration={0.8} className=" font-bold text-[28px]   mb-2 bg-clip-text text-transparent bg-gradient-to-b from-neutral-500 to-neutral-700">
+                    <h4 className=" font-bold text-[28px]   mb-2 bg-clip-text text-transparent bg-gradient-to-b from-neutral-500 to-neutral-700">
                         Education
-                    </AnimateOnVisible>
-                    <AnimateOnVisible animation={"slideRight"} duration={1.0} className=' text-base text-gray-600 font-medium dark:text-gray-400 '>
+                    </h4>
+                    <p className=' text-base text-gray-600 font-medium dark:text-gray-400 '>
                         Discover my academic journey and the foundation of my expertise.
-                    </AnimateOnVisible>
+                    </p>
                 </div>
                 <div className="flex flex-col text-start px-4  ">
                     <div className=" border-l-[3px] border-gray-600 dark:border-gray-400   ">
@@ -188,12 +188,12 @@ const About = () => {
             <br />
             <div className=' flex flex-col justify-start items-start outline-none border-none focus:outline-none hover:border-none focus:border-none  pt-3'>
                 <div className=' mb-12  '>
-                    <AnimateOnVisible animation={"slideRight"} duration={0.8} className=" font-bold text-[28px]   mb-2 bg-clip-text text-transparent bg-gradient-to-b from-neutral-500 to-neutral-700">
+                    <h4 className=" font-bold text-[28px]   mb-2 bg-clip-text text-transparent bg-gradient-to-b from-neutral-500 to-neutral-700">
                         Experience
-                    </AnimateOnVisible>
-                    <AnimateOnVisible animation={"slideRight"} duration={1.0} className=' text-base text-gray-600 font-medium dark:text-gray-400 '>
+                    </h4>
+                    <p className=' text-base text-gray-600 font-medium dark:text-gray-400 '>
                         Explore my professional background and the impact of my work.
-                    </AnimateOnVisible>
+                    </p>
                 </div>
                 {
                     loading ? (

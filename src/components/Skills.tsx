@@ -31,18 +31,18 @@ const Skills = () => {
     return (
         <div id="Skills" className=' pt-6 mt-10  flex flex-col w-full'>
             <div className=' mb-14  '>
-                <AnimateOnVisible animation={"slideRight"} duration={0.8} className=" text-4xl sm:text-[44px] mb-3  font-bold   bg-clip-text text-transparent bg-gradient-to-b from-neutral-500 to-neutral-700">
+                <h3 className=" text-4xl sm:text-[44px] mb-3  font-bold   bg-clip-text text-transparent bg-gradient-to-b from-neutral-500 to-neutral-700">
                     Skills I Have
-                </AnimateOnVisible>
-                <AnimateOnVisible animation={"slideRight"} duration={1.0} className=' text-base text-gray-600 font-medium dark:text-gray-400 '>
+                </h3>
+                <p className=' text-base text-gray-600 font-medium dark:text-gray-400 '>
                     Know what i have learned over the years.
-                </AnimateOnVisible>
+                </p>
             </div>
 
             <div className="flex flex-col lg:flex-row justify-center align-middle lg:justify-between pb-10 mb-10 border-b-2 border-gray-200 dark:border-gray-900 ">
-                <AnimateOnVisible animation={"slideRight"} duration={0.8} className="  bg-clip-text text-transparent bg-gradient-to-b from-neutral-500 to-neutral-700 font-bold text-[28px]    mb-10 lg:mb-0 xl:mr-60">
+                <h4 className="  bg-clip-text   text-transparent bg-gradient-to-b from-neutral-500 to-neutral-700 font-bold text-[28px]    mb-10 lg:mb-0 xl:mr-60">
                     Front-End Development
-                </AnimateOnVisible>
+                </h4>
                 <div className="grid grid-cols-3 sm:grid-cols-5 lg:grid-cols-4 align-content-end gap-10 lg:gap-10 xl:gap-14">
                     <AnimateOnVisible animation={"fade"} duration={1.0} className=" flex flex-col items-center ">
                         <div className="rounded-[50%] w-[50px] h-[50px] shadow-lg p-[6px]  flex justify-center items-center">
@@ -135,9 +135,9 @@ const Skills = () => {
                 </div>
             </div>
             <div className="flex flex-col lg:flex-row justify-center align-middle lg:justify-between  pb-10 mb-10 border-b-2 border-gray-200 dark:border-gray-900 ">
-                <AnimateOnVisible animation={"slideRight"} duration={0.8} className="  bg-clip-text text-transparent bg-gradient-to-b from-neutral-500 to-neutral-700 font-bold text-[28px]    mb-10 lg:mb-0 xl:mr-60 ">
+                <h4 className="  bg-clip-text   text-transparent bg-gradient-to-b from-neutral-500 to-neutral-700 font-bold text-[28px]    mb-10 lg:mb-0 xl:mr-60 ">
                     Back-End Development
-                </AnimateOnVisible>
+                </h4>
                 <div className="grid grid-cols-3 sm:grid-cols-5 lg:grid-cols-4 align-content-end gap-10 lg:gap-10 xl:gap-14">
                     <AnimateOnVisible animation={"fade"} duration={1.0} className=" flex flex-col items-center ">
                         <div className="rounded-[50%] w-[50px] h-[50px] shadow-lg p-[6px]  flex justify-center items-center">
@@ -183,9 +183,9 @@ const Skills = () => {
                 </div>
             </div>
             <div className="flex flex-col lg:flex-row justify-center  lg:justify-between ">
-                <AnimateOnVisible animation={"slideRight"} duration={0.8} className="  bg-clip-text text-transparent bg-gradient-to-b from-neutral-500 to-neutral-700 font-bold text-[28px]    mb-10 lg:mb-0 xl:mr-60">
+                <h4 className="  bg-clip-text   text-transparent bg-gradient-to-b from-neutral-500 to-neutral-700 font-bold text-[28px]    mb-10 lg:mb-0 xl:mr-60">
                     Tools and Technologies
-                </AnimateOnVisible>
+                </h4>
                 <div className="grid grid-cols-3 sm:grid-cols-5 lg:grid-cols-4 gap-10 lg:gap-10 xl:gap-14">
                     <AnimateOnVisible animation={"fade"} duration={1.0} className=" flex flex-col items-center ">
                         <div className="rounded-[50%] w-[50px] h-[50px] shadow-lg p-[6px]  flex justify-center items-center">

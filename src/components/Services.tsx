@@ -11,12 +11,12 @@ const Services = () => {
     return (
         <div id="Services" className=' pt-6 mt-10  flex flex-col  w-full'>
             <div className=' mb-12  '>
-                <AnimateOnVisible animation={"slideRight"} duration={0.8} className=" text-4xl sm:text-[44px] mb-3  font-bold   bg-clip-text text-transparent bg-gradient-to-b from-neutral-500 to-neutral-700">
+                <h3 className=" text-4xl sm:text-[44px] mb-3  font-bold   bg-clip-text text-transparent bg-gradient-to-b from-neutral-500 to-neutral-700">
                     What I Provide
-                </AnimateOnVisible>
-                <AnimateOnVisible animation={"slideRight"} duration={1.0} className=' text-base text-gray-600 font-medium dark:text-gray-400'>
+                </h3>
+                <p className=' text-base text-gray-600 font-medium dark:text-gray-400'>
                     Know in detail what I offer and how I can help you
-                </AnimateOnVisible>
+                </p>
             </div>
             <div className="  grid grid-cols-1 min-[620px]:grid-cols-2  gap-14 min-[580px]:gap-12 md:gap-12 px-2">
                 <AnimateOnVisible animation={"slideUp"} duration={0.9} className="flex flex-col  col-span-1">
