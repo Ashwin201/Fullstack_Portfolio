@@ -21,7 +21,7 @@ const AuthProvider: React.FC<AuthProviderProps> = ({ children, session }) => {
         <div className={`lg:col-span-2 overflow-hidden hidden lg:block ${pathname.startsWith("/admin") && "hidden"} `}>
           <DesktopSidebar />
         </div>
-        <div className={`col-span-9 ${pathname.startsWith("/admin") ? "lg:col-span-9" : "lg:col-span-7"}  overflow-auto `}>
+        <div className={` px-0 sm:px-2 md:px-0 col-span-9 ${pathname.startsWith("/admin") ? "lg:col-span-9" : "lg:col-span-7"}  overflow-auto `}>
           {children}
         </div>
       </div>

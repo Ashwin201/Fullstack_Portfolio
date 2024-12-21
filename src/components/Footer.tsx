@@ -10,7 +10,7 @@ const Footer = () => {
     const pathname = usePathname()
     return (
         <>
-            <footer className='pt-8 mt-14 flex flex-col items-center justify-center w-full  border-t px-3 sm:px-6'>
+            <footer className='pt-8 mt-14 flex flex-col items-center justify-center w-full  border-t  sm:px-6'>
                 <div className={`" grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10  w-full ${pathname.startsWith("/admin") && "hidden"}"`}>
                     <div className=" col-span-1 flex flex-col items-start justify-start gap-3">
                         <Link href="/" className="flex items-start gap-2 ">
@@ -48,7 +48,7 @@ const Footer = () => {
                             </Link>
                         </div>
                     </div>
-                    <div className=" col-span-1 flex flex-col text-start lg:items-center justify-center">
+                    <div className=" col-span-1 flex flex-col text-start lg:items-end justify-center">
                         <h4 className="text-xl font-bold mb-4  bg-clip-text text-transparent bg-gradient-to-b from-neutral-500 to-neutral-700">Quick Links</h4>
                         <div className="flex flex-col space-y-2">
                             {
@@ -56,7 +56,7 @@ const Footer = () => {
                                     <Link
                                         key={navItem?.id}
                                         href={`#${navItem?.href}`}
-                                        className="text-muted-foreground transition-colors hover:text-foreground text-base font-medium lg:text-center"
+                                        className="text-muted-foreground transition-colors hover:text-foreground text-base lg:text-end font-medium "
                                         aria-label='Path Names'
                                     >
                                         {navItem?.pathName}
@@ -66,7 +66,6 @@ const Footer = () => {
                         </div>
                     </div>
                     <p className="   my-3  sm:col-span-2 lg:col-span-3  px-3 sm:px-8 text-base text-center font-medium text-gray-600 dark:text-gray-400">&copy; 2023 Ashmin Sharma. All rights reserved.</p>
-
                 </div>
             </footer>
         </>

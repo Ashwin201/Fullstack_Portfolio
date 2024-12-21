@@ -3,7 +3,7 @@ import { Skeleton } from "@/components/ui/skeleton"
 export default function CardSkeleton() {
     return (
         <>
-            <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-12 -mx-2 sm:-mx-0  ">
+            <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-12   ">
                 <div className="space-y-3 col-span-1">
                     <Skeleton className="w-full h-[160px] object-cover rounded-md " />
                     <Skeleton className="h-8 w-[150px]  rounded-lg" />

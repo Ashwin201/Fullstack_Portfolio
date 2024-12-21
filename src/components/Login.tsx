@@ -8,6 +8,7 @@ import { signIn, useSession } from "next-auth/react";
 import { usePathname, useRouter } from "next/navigation";
 import toast from "react-hot-toast";
 import { BiLogIn } from "react-icons/bi";
+import AnimateOnVisible from "./Animations";
 const Login = () => {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
@@ -51,15 +52,15 @@ const Login = () => {
         <>
             <section className=" my-12  w-full min-h-[100vh] lg:min-h-[85vh] flex justify-center items-center ">
                 <div className="lg:grid  lg:grid-cols-12">
-                    <aside className="   flex lg:justify-start justify-center  lg:col-span-5 w-full  xl:col-span-6">
+                    <AnimateOnVisible animation={"slideLeft"} className="   flex lg:justify-start justify-center  lg:col-span-5 w-full  xl:col-span-6">
                         <img
                             src="https://www.hit4hit.org/img/login/user-icon-6.png"
                             alt="Login"
                             className=" h-auto w-full min-[500px]:w-96  object-fill"
                         />
-                    </aside>
+                    </AnimateOnVisible>
 
-                    <main className="flex items-center justify-center  lg:col-span-7 xl:col-span-6  mt-12  lg:mt-0 ">
+                    <AnimateOnVisible animation={"slideRight"} className="flex items-center justify-center  lg:col-span-7 xl:col-span-6  mt-12  lg:mt-0 ">
                         <div className="max-w-xl lg:max-w-3xl">
                             <Link href="/" aria-label="HomePage">
                                 <Image src={logo} className=" h-10 w-auto " alt="Logo" />
@@ -131,7 +132,7 @@ const Login = () => {
                                 </div>
                             </form>
                         </div>
-                    </main>
+                    </AnimateOnVisible>
                 </div>
             </section>
         </>

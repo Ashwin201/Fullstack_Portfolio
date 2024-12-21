@@ -25,6 +25,7 @@ import ProjectDetail from "./ProjectDetail";
 import { ChevronsDown, ChevronsUp } from "lucide-react";
 import Loading from "./Loading";
 import CardSkeleton from "./Skeletons/CardSkeleton";
+import AnimateOnVisible from "./Animations";
 
 interface ProjectData {
     id: string,
@@ -73,17 +74,22 @@ const Project: React.FC = () => {
     // console.log(projects)
     return (
         <>
-            <div id="Projects" className='pt-6 mt-10 flex flex-col items-center col-span-1 justify-center w-full'>
-                <h3 className="pb-12 text-4xl sm:text-5xl text-center mb-3 font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-500 to-neutral-700">
-                    Featured Works
-                </h3>
+            <div id="Projects" className='pt-6 mt-10 flex flex-col  col-span-1  w-full'>
+                <div className=' mb-12  '>
+                    <AnimateOnVisible animation={"slideRight"} duration={0.8} className=" text-4xl sm:text-[44px] mb-3  font-bold   bg-clip-text text-transparent bg-gradient-to-b from-neutral-500 to-neutral-700">
+                        Featured Works
+                    </AnimateOnVisible>
+                    <AnimateOnVisible animation={"slideRight"} duration={1.0} className=' text-base text-gray-600 font-medium dark:text-gray-400 '>
+                        Take a look at the projects I have created and developed over time.
+                    </AnimateOnVisible>
+                </div>
                 {
                     loading ? <CardSkeleton /> : projects?.length > 0 ? (
 
 
                         <div className="grid grid-cols-1 min-[560px]:grid-cols-2 xl:grid-cols-3 gap-6 sm:gap-12 w-full  ">
                             {projects.slice(0, Index)?.map((item: any, index: number) =>
-                                <Fragment key={index}>
+                                <AnimateOnVisible animation={"slideUp"} duration={1.2} key={index}>
                                     <Card className="  col-span-1  bg-inherit shadow-sm " >
                                         <div className=" col-span-2 lg:col-span-1 group-hover:scale-[.99] ease-in-out duration-500 p-3">
                                             <img
@@ -131,11 +137,11 @@ const Project: React.FC = () => {
                                         </CardFooter>
                                     </Card>
 
-                                </Fragment>
+                                </AnimateOnVisible>
                             )}
                             {
                                 projects?.length > Index &&
-                                <div className=" mt-6 mx-auto w-full col-span-1 sm:col-span-2 xl:col-span-3 place-items-center flex flex-col justify-center  items-center  animate-pulse " onClick={handleIncrease}>
+                                <div className=" mt-3 mx-auto w-full col-span-1 sm:col-span-2 xl:col-span-3 place-items-center flex flex-col justify-center  items-center  animate-pulse " onClick={handleIncrease}>
                                     <span className=" text-gray-600 dark:text-gray-400 font-medium cursor-pointer">See More</span>
                                     <ChevronsDown size={26} className=" cursor-pointer" />
                                 </div>
