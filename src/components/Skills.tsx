@@ -35,7 +35,7 @@ const Skills = () => {
                     Skills I Have
                 </h3>
                 <p className=' text-base text-gray-600 font-medium dark:text-gray-400 '>
-                    Know what i have learned over the years.
+                    Know what i have learned over the time.
                 </p>
             </div>
 

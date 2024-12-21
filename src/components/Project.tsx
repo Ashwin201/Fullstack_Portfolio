@@ -80,7 +80,7 @@ const Project: React.FC = () => {
                         Featured Works
                     </h3>
                     <p className=' text-base text-gray-600 font-medium dark:text-gray-400 '>
-                        Take a look at the projects I have created and developed over time.
+                        Take a look at the projects i have worked and created over  time.
                     </p>
                 </div>
                 {
