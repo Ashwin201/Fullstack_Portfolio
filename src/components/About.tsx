@@ -56,22 +56,22 @@ const About = () => {
 
                     className={` ml-5 min-[450px]:-ml-5 h-[300px] w-auto flex w items-center `}
                 /> */}
-                <AnimateOnVisible animation={"slideRight"} duration={0.9} className="font-bold text-[28px] bg-clip-text text-transparent bg-gradient-to-b  from-neutral-500 to-neutral-700">
+                <AnimateOnVisible animation={"slideUp"} duration={0.9} className="font-bold text-[28px] bg-clip-text text-transparent bg-gradient-to-b  from-neutral-500 to-neutral-700">
                     {userData?.role ? userData?.role : " Full Stack Developer"}
                 </AnimateOnVisible>
                 <div className="mt-6 text-base text-gray-600 dark:text-gray-300  font-medium ">
                     {userData?.desc ? userData?.desc?.map((description: any, index: number) => (
-                        <AnimateOnVisible animation={"slideRight"} duration={1.0} key={index} className=' text-gray-600 dark:text-gray-400 text-base font-medium'>
+                        <AnimateOnVisible animation={"slideUp"} duration={1.0} key={index} className=' text-gray-600 dark:text-gray-400 text-base font-medium'>
                             {description}
                         </AnimateOnVisible>
                     )) : (
                         <>
-                            <AnimateOnVisible animation={"slideRight"} duration={1.0} className=' text-gray-600 dark:text-gray-400 text-base font-medium'>
+                            <AnimateOnVisible animation={"slideUp"} duration={1.0} className=' text-gray-600 dark:text-gray-400 text-base font-medium'>
                                 Hi, I&apos;m Ashmin Sharma, a web developer proficient in front-end technologies, and good in back-end technologies as well. With expertise in frameworks like Nextjs ,
                                 I specialize in crafting visually appealing and responsive websites that prioritize a seamless user experience. My skills extend to database management with MongoDB,
                                 ensuring robust back-end support for web applications. Efficeint in version control with Git and collaborating effectively within teams.
                             </AnimateOnVisible>
-                            <AnimateOnVisible animation={"slideRight"} duration={1.0} className=' text-gray-600 dark:text-gray-400 text-base font-medium'>
+                            <AnimateOnVisible animation={"slideUp"} duration={1.0} className=' text-gray-600 dark:text-gray-400 text-base font-medium'>
                                 Explore my portfolio to witness my commitment to turning ideas into functional, innovative, and user-centric web solutions.
                                 Let&apos;s connect and discuss how I can bring your digital vision to life!
                             </AnimateOnVisible>
@@ -80,7 +80,7 @@ const About = () => {
 
                 </div>
 
-                <AnimateOnVisible animation={"slideRight"} duration={1.0} className=" flex  my-6">
+                <AnimateOnVisible animation={"slideUp"} duration={1.0} className=" flex  my-6">
                     <Link
                         href="https://instagram.com/ashwin.203?igshid=YmMyMTA2M2Y="
                         className="mr-3"
@@ -107,7 +107,7 @@ const About = () => {
                     </Link>
                 </AnimateOnVisible>
                 <div className="flex">
-                    <AnimateOnVisible animation={"slideRight"} duration={0.8} className="flex max-[360px]:flex-col-reverse flex-row font-medium max-[300px]:flex-col gap-4 ">
+                    <AnimateOnVisible animation={"slideUp"} duration={0.8} className="flex max-[360px]:flex-col-reverse flex-row font-medium max-[300px]:flex-col gap-4 ">
 
                         <Button>
                             <Link
