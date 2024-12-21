@@ -51,7 +51,7 @@ const WorkCounters = () => {
                                 <h2 className="text-4xl pb-2  font-bold  text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-500 to-neutral-700">1+</h2>
                             ) : (
 
-                                <h2 className="text-4xl pb-2  font-bold  text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-500 to-neutral-700">
+                                <h2 className="text-4xl pb-4  font-bold  text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-500 to-neutral-700">
                                     {userData?.experience}
 
                                     +</h2>
