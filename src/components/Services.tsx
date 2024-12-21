@@ -19,7 +19,7 @@ const Services = () => {
                 </AnimateOnVisible>
             </div>
             <div className="  grid grid-cols-1 min-[620px]:grid-cols-2  gap-14 min-[580px]:gap-12 md:gap-12 px-2">
-                <AnimateOnVisible animation={"slideUp"} duration={1.2} className="flex flex-col  col-span-1">
+                <AnimateOnVisible animation={"slideUp"} duration={0.9} className="flex flex-col  col-span-1">
                     <div className="mb-5">
                         <Image src={fast} width={150} height={150} className=" w-[150px] h-auto" alt="service" />
                     </div>
@@ -30,7 +30,7 @@ const Services = () => {
                         Ensuring swift website loading times, seamless interaction without lag, and delivering an optimal user experience are my top priorities.
                     </p>
                 </AnimateOnVisible>
-                <AnimateOnVisible animation={"slideUp"} duration={1.2} className="flex flex-col  col-span-1">
+                <AnimateOnVisible animation={"slideUp"} duration={0.9} className="flex flex-col  col-span-1">
                     <div className="mb-5">
                         <Image src={responsive} width={150} height={150} className=" w-[150px] h-auto" alt="service" />
                     </div>
@@ -42,7 +42,7 @@ const Services = () => {
                         ensuring a seamless user experience across different platforms.
                     </p>
                 </AnimateOnVisible>
-                <AnimateOnVisible animation={"slideUp"} duration={1.2} className="flex flex-col col-span-1">
+                <AnimateOnVisible animation={"slideUp"} duration={0.9} className="flex flex-col col-span-1">
                     <div className="mb-5" >
                         <Image src={design} width={150} height={150} className=" w-[150px] h-auto" alt="service" />
                     </div >
@@ -53,7 +53,7 @@ const Services = () => {
                         Specialize in creating customized, interactive, and visually  appealing designs to meet your preferences and needs.
                     </p>
                 </AnimateOnVisible >
-                <AnimateOnVisible animation={"slideUp"} duration={1.2} className="flex flex-col col-span-1">
+                <AnimateOnVisible animation={"slideUp"} duration={0.9} className="flex flex-col col-span-1">
                     <div className="mb-5" >
                         <Image src={seo} width={150} height={150} className=" w-[150px] h-auto" alt="service" />
                     </div >

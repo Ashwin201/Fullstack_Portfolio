@@ -98,7 +98,7 @@ const Contact = () => {
 
                     <div className="flex  md:col-span-7 xl:col-span-6   w-full   ">
                         <div className=" lg:max-w-3xl">
-                            <AnimateOnVisible animation={"slideRight"} duration={1.1} className=" flex items-center 
+                            <AnimateOnVisible animation={"slideRight"} duration={0.8} className=" flex items-center 
                                 text-center gap-[10px] font-semibold text-[24px] min-w-[345px]:text-3xl bg-clip-text text-transparent bg-gradient-to-b from-neutral-500 to-neutral-700">
                                 Send me a Message{" "}
                                 <MdMarkEmailUnread size={30} className="mt-1" />
@@ -109,12 +109,12 @@ const Contact = () => {
                                 className="my-4 flex gap-2 items-end "
                             >
                                 <FaMailBulk size={25} /> :{" "}
-                                <AnimateOnVisible animation={"slideRight"} duration={1.2} className="underline text-base font-medium">
+                                <AnimateOnVisible animation={"slideRight"} duration={0.9} className="underline text-base font-medium">
                                     ashminsharma203@gmail.com
                                 </AnimateOnVisible>
                             </Link>
 
-                            <AnimateOnVisible animation={"slideRight"} duration={1.2} className="leading-relaxed text-gray-600 font-medium dark:text-gray-400">
+                            <AnimateOnVisible animation={"slideRight"} duration={0.9} className="leading-relaxed text-gray-600 font-medium dark:text-gray-400">
                                 Connect with me! Feel free to reach out for collaboration,
                                 opportunities, or just a friendly chat.
                             </AnimateOnVisible>
@@ -124,7 +124,7 @@ const Contact = () => {
                                 className="mt-8 grid grid-cols-6 gap-6"
                                 onSubmit={handleSubmit}
                             >
-                                <AnimateOnVisible animation={"slideUp"} duration={1.2} className="col-span-6  sm:col-span-3">
+                                <AnimateOnVisible animation={"slideUp"} duration={0.9} className="col-span-6  sm:col-span-3">
                                     <label
                                         htmlFor="Name"
                                         className="relative block rounded-md border-2 border-gray-200 dark:border-gray-600 shadow-sm dark:focus-within:border-gray-200 focus-within:border-black  "
@@ -145,7 +145,7 @@ const Contact = () => {
                                         </span>
                                     </label>
                                 </AnimateOnVisible>
-                                <AnimateOnVisible animation={"slideUp"} duration={1.2} className="col-span-6  sm:col-span-3">
+                                <AnimateOnVisible animation={"slideUp"} duration={0.9} className="col-span-6  sm:col-span-3">
                                     <label
                                         htmlFor="Email"
                                         className="relative block rounded-md border-2 border-gray-200 dark:border-gray-600 shadow-sm dark:focus-within:border-gray-200 focus-within:border-black  "
@@ -167,7 +167,7 @@ const Contact = () => {
                                         </span>
                                     </label>
                                 </AnimateOnVisible>
-                                <AnimateOnVisible animation={"slideUp"} duration={1.2} className="col-span-6  ">
+                                <AnimateOnVisible animation={"slideUp"} duration={0.9} className="col-span-6  ">
                                     <label
                                         htmlFor="Subject"
                                         className="relative flex text-start justify-start items-start rounded-md border-2 border-gray-200 dark:border-gray-600 shadow-sm dark:focus-within:border-gray-200 focus-within:border-black "
@@ -189,7 +189,7 @@ const Contact = () => {
                                         </span>
                                     </label>
                                 </AnimateOnVisible>
-                                <AnimateOnVisible animation={"slideUp"} duration={1.2} className="col-span-6  ">
+                                <AnimateOnVisible animation={"slideUp"} duration={0.9} className="col-span-6  ">
                                     <label
                                         htmlFor="Message"
                                         className="relative block rounded-md border-2 border-gray-200 dark:border-gray-600 shadow-sm dark:focus-within:border-gray-200 focus-within:border-black  "
@@ -211,7 +211,7 @@ const Contact = () => {
                                         </span>
                                     </label>
                                 </AnimateOnVisible>
-                                <AnimateOnVisible animation={"slideUp"} duration={1.2}>
+                                <AnimateOnVisible animation={"slideUp"} duration={0.9}>
                                     <button
                                         type="submit"
                                         className=" flex gap-2  items-center text-center w-fit py-[6px] px-3 pr-4 text-base  font-semibold  rounded-md bg-black dark:bg-[#f8f9fa] text-white dark:text-black  border-solid border-2 border-black

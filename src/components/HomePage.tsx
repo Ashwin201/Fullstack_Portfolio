@@ -41,11 +41,11 @@ function HomePage() {
           </AnimateOnVisible>
 
 
-          <AnimateOnVisible animation={"slideRight"} duration={1} className=" mb-4 font-medium text-base dark:text-gray-400 text-gray-600 mt-4 text-start ">
+          <AnimateOnVisible animation={"slideRight"} duration={1.0} className=" mb-4 font-medium text-base dark:text-gray-400 text-gray-600 mt-4 text-start ">
             A full-stack developer passionate about building seamless web applications. Skilled in crafting intuitive front-end designs and robust back-end systems.
             Let&apos;s turn ideas into impactful solutions.
           </AnimateOnVisible>
-          <AnimateOnVisible animation={"slideRight"} duration={1.2} className="flex items-center space-x-4 mt-2">
+          <AnimateOnVisible animation={"slideRight"} duration={0.9} className="flex items-center space-x-4 mt-2">
             <Link
               href="https://instagram.com/ashwin.203?igshid=YmMyMTA2M2Y="
               aria-label="Insta"
@@ -68,7 +68,7 @@ function HomePage() {
               <FaLinkedin size={26} />
             </Link>
           </AnimateOnVisible>
-          <AnimateOnVisible animation={"slideRight"} duration={1.4} className="flex justify-start mt-7 lg:hidden">
+          <AnimateOnVisible animation={"slideRight"} duration={1.0} className="flex justify-start mt-7 lg:hidden">
             <ul className="flex max-[360px]:flex-col-reverse flex-row font-medium max-[300px]:flex-col gap-4 ">
 
 

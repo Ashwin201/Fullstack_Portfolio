@@ -27,10 +27,10 @@ const WorkCounters = () => {
                             <div className="relative  h-full overflow-hidden rounded-2xl flex flex-col justify-start md:justify-center items-start md:items-center md:mt-0 mt-6">
 
 
-                                <AnimateOnVisible animation={"zoomIn"} duration={1.2} className="text-3xl text-start md:text-center mb-3  font-bold   bg-clip-text text-transparent bg-gradient-to-b from-neutral-500 to-neutral-700">
+                                <AnimateOnVisible animation={"zoomIn"} duration={0.9} className="text-3xl text-start md:text-center mb-3  font-bold   bg-clip-text text-transparent bg-gradient-to-b from-neutral-500 to-neutral-700">
                                     Expertise I Have
                                 </AnimateOnVisible>
-                                <AnimateOnVisible animation={"zoomIn"} duration={1.2} className=" text-start md:text-center mx-auto font-medium text-base dark:text-gray-400 text-gray-600">
+                                <AnimateOnVisible animation={"zoomIn"} duration={0.9} className=" text-start md:text-center mx-auto font-medium text-base dark:text-gray-400 text-gray-600">
                                     Proficient in building
                                     <FlipWords words={words} /> <br />
 

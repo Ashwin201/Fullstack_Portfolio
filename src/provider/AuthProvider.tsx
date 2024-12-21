@@ -1,10 +1,11 @@
 "use client";
 import { SessionProvider } from "next-auth/react";
-import React, { ReactNode } from "react";
+import React, { ReactNode, useEffect, useState } from "react";
 import { Session } from "next-auth";
 import DesktopSidebar from "@/components/DesktopSidebar";
 import { usePathname } from "next/navigation";
 import { AboutProvider } from "@/context/AboutProvider";
+import Loader from "@/components/Loader";
 
 interface AuthProviderProps {
   children: ReactNode;
@@ -12,9 +13,17 @@ interface AuthProviderProps {
 }
 
 const AuthProvider: React.FC<AuthProviderProps> = ({ children, session }) => {
+  const [loading, setLoading] = useState(true)
 
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoading(false)
+    }, 2000)
+
+    return () => clearTimeout(timer)
+  }, [])
   const pathname = usePathname()
-  return <SessionProvider session={session}>
+  return loading ? <Loader /> : <SessionProvider session={session}>
 
     <AboutProvider>
       <div className="grid grid-cols-9 h-screen">

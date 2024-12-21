@@ -89,7 +89,7 @@ const Project: React.FC = () => {
 
                         <div className="grid grid-cols-1 min-[560px]:grid-cols-2 xl:grid-cols-3 gap-6 sm:gap-12 w-full  ">
                             {projects.slice(0, Index)?.map((item: any, index: number) =>
-                                <AnimateOnVisible animation={"slideUp"} duration={1.2} key={index}>
+                                <AnimateOnVisible animation={"slideUp"} duration={1.0} key={index}>
                                     <Card className="  col-span-1  bg-inherit shadow-sm " >
                                         <div className=" col-span-2 lg:col-span-1 group-hover:scale-[.99] ease-in-out duration-500 p-3">
                                             <img
