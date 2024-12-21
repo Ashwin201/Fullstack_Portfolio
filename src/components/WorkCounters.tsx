@@ -6,7 +6,7 @@ import { NumberTicker } from './ui/numberTicker';
 import AnimateOnVisible from './Animations';
 
 const WorkCounters = () => {
-    const words = ["functional", "beautiful", "modern", "fast", "user friendly"];
+    const words = ["functional", "beautiful", "modern", "fast"];
     const { userData, loader } = useAbout();
     return (
         <section className="text-gray-600 body-font  ">
