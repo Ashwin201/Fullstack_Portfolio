@@ -90,7 +90,7 @@ const AdminNavbar = () => {
 
         <div className="relative flex sm:hidden  ">
           <button
-            className=" animate-pulse duration-300"
+            className=" "
             onClick={() => setMenuOpen((prev) => !prev)}
           >
             <BiMenuAltRight size={34} />

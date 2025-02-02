@@ -26,9 +26,8 @@ const About = () => {
                     },
                 });
                 if (res.ok) {
-                    const info = await res.json();
-                    // console.log(info)
-                    const response = info.reverse();
+                    const response = await res.json();
+                    // console.log(response)
                     setData(response);
                     setLoading(false)
                 }
@@ -186,7 +185,7 @@ const About = () => {
             <br />
             <br />
             <br />
-            <div className=' flex flex-col justify-start items-start outline-none border-none focus:outline-none hover:border-none focus:border-none  pt-3'>
+            <div className=' flex w-full flex-col justify-start items-start outline-none border-none focus:outline-none hover:border-none focus:border-none  pt-3'>
                 <div className=' mb-12  '>
                     <h4 className=" font-bold text-[28px]   mb-2 bg-clip-text text-transparent bg-gradient-to-b from-neutral-500 to-neutral-700">
                         Experience
@@ -197,9 +196,13 @@ const About = () => {
                 </div>
                 {
                     loading ? (
-                        <ExperienceSkeleton />
+                        <>
+                            <ExperienceSkeleton />
+                            <br />
+                            <ExperienceSkeleton />
+                        </>
                     ) : (
-                        data.reverse() &&
+
                         data?.map((item: any, index: number) => (
                             <div key={index} className="flex flex-col justify-start items-start text-start px-4   ">
 

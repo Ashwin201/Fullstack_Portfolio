@@ -109,29 +109,33 @@ const Project: React.FC = () => {
                                         </CardContent>
                                         <CardFooter>
                                             <div className="flex w-full justify-between items-center mt-1">
-                                                <Link href={`${item?.github}`} aria-label="Github" target="_blank">
-                                                    <BsGithub size={38} />
-                                                </Link>
+                                                {item?.github &&
+                                                    <Link href={`${item?.github}`} aria-label="Github" target="_blank">
+                                                        <BsGithub size={38} />
+                                                    </Link>
+                                                }
 
 
+                                                <div className=" w-full flex justify-end">
 
-                                                <Dialog  >
-                                                    <DialogTrigger><span className="font-medium text-[16px] underline text-gray-600 dark:text-gray-400  hover:text-gray-700  dark:hover:text-gray-400 transition-all duration-300"
-                                                    >
-                                                        Know More <span className="sr-only">View detail page of {item?.title}</span>
-                                                    </span></DialogTrigger>
-                                                    <DialogContent className="rounded-lg h-[85%]  w-[95%]  sm:max-w-[80%] sm:h-[80%]  overflow-auto dark:bg-gradient-to-t dark:from-neutral-900
+                                                    <Dialog  >
+                                                        <DialogTrigger><span className="font-medium   text-[16px] underline text-gray-600 dark:text-gray-400  hover:text-gray-700  dark:hover:text-gray-400 transition-all duration-300"
+                                                        >
+                                                            Know More <span className="sr-only">View detail page of {item?.title}</span>
+                                                        </span></DialogTrigger>
+                                                        <DialogContent className="rounded-lg h-[85%]  w-[95%]  sm:max-w-[80%] sm:h-[80%]  overflow-auto dark:bg-gradient-to-t dark:from-neutral-900
                                                      dark:to-stone-950 bg-gradient-to-t from-white to-slate-50">
-                                                        {/* <DialogHeader>
+                                                            {/* <DialogHeader>
                                                             <DialogTitle>Are you absolutely sure?</DialogTitle>
                                                             <DialogDescription>
                                                                 This action cannot be undone. This will permanently delete your account
                                                                 and remove your data from our servers.
                                                             </DialogDescription>
                                                         </DialogHeader> */}
-                                                        <ProjectDetail id={item?._id} />
-                                                    </DialogContent>
-                                                </Dialog>
+                                                            <ProjectDetail id={item?._id} />
+                                                        </DialogContent>
+                                                    </Dialog>
+                                                </div>
 
                                             </div>
                                         </CardFooter>

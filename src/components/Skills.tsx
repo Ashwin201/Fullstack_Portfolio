@@ -41,7 +41,7 @@ const Skills = () => {
 
             <div className="flex flex-col lg:flex-row justify-center align-middle lg:justify-between pb-10 mb-10 border-b-2 border-gray-200 dark:border-gray-900 ">
                 <h4 className="  bg-clip-text   text-transparent bg-gradient-to-b from-neutral-500 to-neutral-700 font-bold text-[28px]    mb-10 lg:mb-0 xl:mr-60">
-                    Front-End Development
+                    Frontend Development
                 </h4>
                 <div className="grid grid-cols-3 sm:grid-cols-5 lg:grid-cols-4 align-content-end gap-10 lg:gap-10 xl:gap-14">
                     <AnimateOnVisible animation={"fade"} duration={1.0} className=" flex flex-col items-center ">
@@ -132,11 +132,19 @@ const Skills = () => {
                             Zod
                         </span>
                     </AnimateOnVisible>
+                    <AnimateOnVisible animation={"fade"} duration={1.0} className=" flex flex-col items-center ">
+                        <div className="rounded-[50%] w-[50px] h-[50px] shadow-lg p-3  flex justify-center items-center">
+                            <Reactjs />
+                        </div>
+                        <span className="  font-semibold mt-2 text-text1  text-[12.5px] text-center">
+                            React Native
+                        </span>
+                    </AnimateOnVisible>
                 </div>
             </div>
             <div className="flex flex-col lg:flex-row justify-center align-middle lg:justify-between  pb-10 mb-10 border-b-2 border-gray-200 dark:border-gray-900 ">
                 <h4 className="  bg-clip-text   text-transparent bg-gradient-to-b from-neutral-500 to-neutral-700 font-bold text-[28px]    mb-10 lg:mb-0 xl:mr-60 ">
-                    Back-End Development
+                    Backend Development
                 </h4>
                 <div className="grid grid-cols-3 sm:grid-cols-5 lg:grid-cols-4 align-content-end gap-10 lg:gap-10 xl:gap-14">
                     <AnimateOnVisible animation={"fade"} duration={1.0} className=" flex flex-col items-center ">
@@ -184,7 +192,7 @@ const Skills = () => {
             </div>
             <div className="flex flex-col lg:flex-row justify-center  lg:justify-between ">
                 <h4 className="  bg-clip-text   text-transparent bg-gradient-to-b from-neutral-500 to-neutral-700 font-bold text-[28px]    mb-10 lg:mb-0 xl:mr-60">
-                    Tools and Technologies
+                    Other  Tools & Technologies
                 </h4>
                 <div className="grid grid-cols-3 sm:grid-cols-5 lg:grid-cols-4 gap-10 lg:gap-10 xl:gap-14">
                     <AnimateOnVisible animation={"fade"} duration={1.0} className=" flex flex-col items-center ">

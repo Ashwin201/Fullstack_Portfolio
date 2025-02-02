@@ -21,9 +21,9 @@ const AdminLayout: React.FC<AdminLayoutProps> = ({ children }) => {
     router.push("/login");
   }
 
-  return <div className="overflow-x-hidden flex flex-col w-full px-5 sm:px-10 md:px-20  lg:px-32" >
+  return <div className="overflow-x-hidden flex flex-col w-full  sm:px-10 md:px-20  lg:px-32" >
     <AdminNavbar />
-    <div className=" flex w-full  min-h-[calc(100vh-56px)] justify-center items-center">
+    <div className=" flex w-full  min-h-[calc(100vh-56px)]  px-2 justify-center items-center">
       {children}
     </div>
   </div>;
