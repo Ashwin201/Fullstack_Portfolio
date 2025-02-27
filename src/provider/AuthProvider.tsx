@@ -6,6 +6,7 @@ import DesktopSidebar from "@/components/DesktopSidebar";
 import { usePathname } from "next/navigation";
 import { AboutProvider } from "@/context/AboutProvider";
 import Loader from "@/components/Loader";
+import { ScrollToTop } from "@/components/ScrollToTop";
 
 interface AuthProviderProps {
   children: ReactNode;
@@ -30,8 +31,10 @@ const AuthProvider: React.FC<AuthProviderProps> = ({ children, session }) => {
         <div className={`lg:col-span-2 overflow-hidden hidden lg:block ${pathname.startsWith("/admin") && "hidden"} `}>
           <DesktopSidebar />
         </div>
-        <div className={` px-0 sm:px-2 md:px-0 col-span-9 ${pathname.startsWith("/admin") ? "lg:col-span-9" : "lg:col-span-7"}  overflow-auto `}>
+        <div className={` relative px-0 sm:px-2 md:px-0 col-span-9 ${pathname.startsWith("/admin") ? "lg:col-span-9" : "lg:col-span-7"} overflow-y-auto  scroll-class `}>
           {children}
+          <ScrollToTop />
+
         </div>
       </div>
     </AboutProvider>

@@ -3,7 +3,6 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/ui/theme-provider";
 import DesktopSidebar from "@/components/DesktopSidebar";
-import { ScrollToTop } from "@/components/ScrollToTop";
 import { Toaster } from "react-hot-toast";
 import AuthProvider from "@/provider/AuthProvider";
 

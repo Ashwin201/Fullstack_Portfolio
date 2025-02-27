@@ -116,17 +116,22 @@ const ProjectDetail = ({ id }: { id: string }) => {
                   <div className="font-bold text-2xl bg-clip-text text-transparent bg-gradient-to-b from-neutral-500 to-neutral-700">{data?.title}</div>
                   <p className="font-medium text-gray-600 dark:text-gray-400">{data?.description}</p>
                   <div className="flex justify-between items-center mt-2">
-                    <Link href={`${data?.github}`} aria-label="link" target="_blank">
-                      <BsGithub size={38} />
-                    </Link>
-                    <Link
-                      href={`${data?.live}`}
-                      target="_blank"
-                      aria-label="See Live"
-                      className="font-semibold text-[17px] underline transition-all duration-300 text-gray-600 dark:text-gray-400"
-                    >
-                      See Live
-                    </Link>
+                    {
+                      data?.github &&
+                      <Link href={`${data?.github}`} aria-label="link" target="_blank">
+                        <BsGithub size={38} />
+                      </Link>
+                    }
+                    <div className="flex w-full justify-end">
+                      <Link
+                        href={`${data?.live}`}
+                        target="_blank"
+                        aria-label="See Live"
+                        className="font-semibold text-[17px] underline transition-all duration-300 text-gray-600 dark:text-gray-400"
+                      >
+                        See Live
+                      </Link>
+                    </div>
                   </div>
                 </div>
               </div>

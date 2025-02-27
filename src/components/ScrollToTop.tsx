@@ -7,38 +7,39 @@ export const ScrollToTop = () => {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
+    const scrollableDiv = document.querySelector(".scroll-class");
+
+    if (!scrollableDiv) return;
+
     const handleScroll = () => {
-      if (window.scrollY > window.innerHeight) {
-        setIsVisible(true);
-      } else {
-        setIsVisible(false);
-      }
+      setIsVisible(scrollableDiv.scrollTop > window.innerHeight);
     };
 
-    window.addEventListener("scroll", handleScroll);
+    scrollableDiv.addEventListener("scroll", handleScroll);
     return () => {
-      window.removeEventListener("scroll", handleScroll);
+      scrollableDiv.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
   const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
+    const scrollableDiv = document.querySelector(".scroll-class");
+    if (scrollableDiv) {
+      scrollableDiv.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+    }
   };
 
   return (
-    <>
-      {isVisible && (
-        <Button
-          className="fixed bottom-8 right-6 opacity-90 shadow-md"
-          size="icon"
-          onClick={scrollToTop}
-        >
-          <ArrowUpToLine className="h-4 w-4" />
-        </Button>
-      )}
-    </>
+    isVisible && (
+      <Button
+        className="fixed bottom-5 right-5 sm:bottom-8 sm:right-8 opacity-90 shadow-md rounded-full"
+        size="icon"
+        onClick={scrollToTop}
+      >
+        <ArrowUpToLine className="h-4 w-4" />
+      </Button>
+    )
   );
 };

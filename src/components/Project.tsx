@@ -145,7 +145,7 @@ const Project: React.FC = () => {
                             )}
                             {
                                 projects?.length > Index &&
-                                <div className=" mt-3 mx-auto w-full col-span-1 sm:col-span-2 xl:col-span-3 place-items-center flex flex-col justify-center  items-center  animate-pulse " onClick={handleIncrease}>
+                                <div className=" mx-auto w-full col-span-1 sm:col-span-2 xl:col-span-3 place-items-center flex flex-col justify-center  items-center  animate-pulse " onClick={handleIncrease}>
                                     <span className=" text-gray-600 dark:text-gray-400 font-medium cursor-pointer">See More</span>
                                     <ChevronsDown size={26} className=" cursor-pointer" />
                                 </div>

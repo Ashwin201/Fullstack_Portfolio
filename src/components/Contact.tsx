@@ -124,7 +124,7 @@ const Contact = () => {
                                 className="mt-8 grid grid-cols-6 gap-6"
                                 onSubmit={handleSubmit}
                             >
-                                <AnimateOnVisible animation={"slideUp"} duration={0.9} className="col-span-6  sm:col-span-3">
+                                <div className="col-span-6  sm:col-span-3">
                                     <label
                                         htmlFor="Name"
                                         className="relative block rounded-md border-2 border-gray-200 dark:border-gray-600 shadow-sm dark:focus-within:border-gray-200 focus-within:border-black  "
@@ -144,8 +144,8 @@ const Contact = () => {
                                             Name
                                         </span>
                                     </label>
-                                </AnimateOnVisible>
-                                <AnimateOnVisible animation={"slideUp"} duration={0.9} className="col-span-6  sm:col-span-3">
+                                </div>
+                                <div className="col-span-6  sm:col-span-3">
                                     <label
                                         htmlFor="Email"
                                         className="relative block rounded-md border-2 border-gray-200 dark:border-gray-600 shadow-sm dark:focus-within:border-gray-200 focus-within:border-black  "
@@ -166,8 +166,8 @@ const Contact = () => {
                                             Email
                                         </span>
                                     </label>
-                                </AnimateOnVisible>
-                                <AnimateOnVisible animation={"slideUp"} duration={0.9} className="col-span-6  ">
+                                </div>
+                                <div className="col-span-6  ">
                                     <label
                                         htmlFor="Subject"
                                         className="relative flex text-start justify-start items-start rounded-md border-2 border-gray-200 dark:border-gray-600 shadow-sm dark:focus-within:border-gray-200 focus-within:border-black "
@@ -188,8 +188,8 @@ const Contact = () => {
                                             Subject
                                         </span>
                                     </label>
-                                </AnimateOnVisible>
-                                <AnimateOnVisible animation={"slideUp"} duration={0.9} className="col-span-6  ">
+                                </div>
+                                <div className="col-span-6  ">
                                     <label
                                         htmlFor="Message"
                                         className="relative block rounded-md border-2 border-gray-200 dark:border-gray-600 shadow-sm dark:focus-within:border-gray-200 focus-within:border-black  "
@@ -210,7 +210,7 @@ const Contact = () => {
                                             Message
                                         </span>
                                     </label>
-                                </AnimateOnVisible>
+                                </div>
                                 <button
                                     type="submit"
                                     className=" flex gap-2  items-center text-center w-fit py-[6px] px-3 pr-4 text-base  font-semibold  rounded-md bg-black dark:bg-[#f8f9fa] text-white dark:text-black  border-solid border-2 border-black

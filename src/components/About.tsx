@@ -194,11 +194,11 @@ const About = () => {
                         Explore my professional background and the impact of my work.
                     </p>
                 </div>
+
                 {
                     loading ? (
                         <>
                             <ExperienceSkeleton />
-                            <br />
                             <ExperienceSkeleton />
                         </>
                     ) : (

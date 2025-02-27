@@ -144,6 +144,7 @@ body {
   width: 50px;
   height: 50px;
   color: #9b9c9d;
+  margin-bottom: 40px;
 }
 
 .loader:before,
@@ -151,8 +152,8 @@ body {
   content: "";
   display: block;
   position: absolute;
-  top: 48%;
-  left: 48%;
+  top: 45%;
+  left: 45%;
   width: inherit;
   height: inherit;
   border-radius: 50%;

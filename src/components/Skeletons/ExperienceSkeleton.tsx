@@ -9,7 +9,7 @@ const ExperienceSkeleton = () => {
                     <Skeleton className=' w-[70%] sm:w-[400px] h-8 rounded-md'></Skeleton>
                     <Skeleton className=' w-[40%] sm:w-[200px] h-6 rounded-md my-4'></Skeleton>
                     <Skeleton className=' w-[50%] sm:w-[300px]  h-5 rounded-md '></Skeleton>
-                    <div className='mt-4 flex  flex-col gap-1 min-w-full'>
+                    <div className='mt-4 flex  flex-col gap-1 min-w-full pb-7'>
                         <Skeleton className=' w-[98%] h-3 rounded-md'></Skeleton>
                         <Skeleton className=' w-[96%] h-3 rounded-md'></Skeleton>
                         <Skeleton className=' w-[96%] h-3 rounded-md'></Skeleton>
