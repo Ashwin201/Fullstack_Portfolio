@@ -66,12 +66,12 @@ export function NavProjects({
     }, []);
     return (
         <SidebarGroup className="group-data-[collapsible=icon]:hidden">
-            <SidebarGroupLabel className=" text-sm mb-2 font-medium dark:text-gray-300 text-gray-700 "> Experience</SidebarGroupLabel>
+            <SidebarGroupLabel className=" text-sm  font-medium dark:text-gray-300 text-gray-700 "> Experience</SidebarGroupLabel>
 
-            <SidebarMenu className={` flex flex-col gap-6 ${open && "px-3"}`}>
+            <SidebarMenu className={` flex flex-col pt-4 gap-6 ${open && "px-3"}`}>
                 {
                     loading ?
-                        <div className="flex flex-col gap-6">
+                        <div className="flex flex-col pt-1 gap-6">
 
                             <div className=" flex gap-2 items-center">
                                 <Skeleton className="cursor-pointer object-cover rounded-md w-8 h-8" />
