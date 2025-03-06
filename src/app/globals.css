@@ -24,36 +24,45 @@ div:active {
   outline: none;
 }
 
-/* Custom Css for Scroll bars */
-::-webkit-scrollbar,
-.scrollBar {
-  width: 0.2rem;
-}
-/* 
-::-webkit-scrollbar-track {
-  background-color: grey;
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
 }
 
-::-webkit-scrollbar-thumb {
-  background-color: rgb(24, 23, 23);
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
-.dark ::-webkit-scrollbar-track {
-  background-color: rgb(54, 53, 53);
+.custom-scrollbar::-webkit-scrollbar {
+  width: 12px;
+  border-radius: 10px;
 }
 
-.dark ::-webkit-scrollbar-thumb {
-  background-color: rgb(23, 23, 23);
-} */
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #b4b4b4;
+  border-radius: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #b4b4b4;
+}
+
+.custom-scrollbar {
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+  scrollbar-width: thin;
+  scrollbar-color: #dbdada #f1f1f1;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-body::-webkit-scrollbar {
-  display: none;
-}
 html {
   scrollbar-width: none;
   scroll-behavior: smooth;
@@ -63,6 +72,7 @@ body {
   overflow-x: hidden;
   -ms-overflow-style: none;
 }
+
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -94,6 +104,22 @@ body {
     --ring: 222.2 84% 4.9%;
 
     --radius: 0.5rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
   }
 
   .dark {
@@ -124,6 +150,14 @@ body {
     --border: 217.2 32.6% 17.5%;
     --input: 217.2 32.6% 17.5%;
     --ring: 212.7 26.8% 83.9%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
   }
 }
 
@@ -134,6 +168,9 @@ body {
   body {
     @apply bg-background text-foreground;
   }
+  .theme-gradient-text {
+    @apply text-gray-700 dark:text-gray-200;
+  }
 }
 
 /* loader css */
@@ -143,7 +180,8 @@ body {
   border-radius: 50%;
   width: 50px;
   height: 50px;
-  color: #909193;
+  color: #9b9c9d;
+  margin-bottom: 40px;
 }
 
 .loader:before,
@@ -151,8 +189,8 @@ body {
   content: "";
   display: block;
   position: absolute;
-  top: 48%;
-  left: 48%;
+  top: 45%;
+  left: 45%;
   width: inherit;
   height: inherit;
   border-radius: 50%;
@@ -160,7 +198,7 @@ body {
   animation: 1s spin linear infinite;
 }
 .loader:after {
-  color: #540909;
+  color: #343535;
   transform: rotateY(70deg);
   animation-delay: 0.2s;
 }

@@ -14,7 +14,7 @@ interface ExperienceAttributes {
 export async function GET(req: Request): Promise<NextResponse> {
   try {
     await connectToDb();
-    const data = await Experience.find();
+    const data = await Experience.find().sort({ _id: -1 });
     return NextResponse.json(data, { status: 200 });
   } catch (error) {
     console.log(error);

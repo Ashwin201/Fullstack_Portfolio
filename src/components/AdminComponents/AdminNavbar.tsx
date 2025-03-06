@@ -90,7 +90,7 @@ const AdminNavbar = () => {
 
         <div className="relative flex sm:hidden  ">
           <button
-            className=" animate-pulse duration-300"
+            className=" "
             onClick={() => setMenuOpen((prev) => !prev)}
           >
             <BiMenuAltRight size={34} />
@@ -110,7 +110,7 @@ const AdminNavbar = () => {
                 </span>
                 <p
                   onClick={() => setMenuOpen(false)}
-                  className=" text-sm font-medium text-gray-600 dark:text-gray-400"
+                  className=" text-sm font-medium text-gray-600 dark:text-gray-300"
                 >
                   {session?.user?.email}
                 </p>

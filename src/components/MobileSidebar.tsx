@@ -1,59 +1,65 @@
 import Link from "next/link"
-import logo from "../../public/images/logo.webp"
 import Sidebar from "./SidebarContent"
 import Image from "next/image"
 import { RxCross2 } from "react-icons/rx";
 import profilePic from "../../public/images/profile.jpg"
 import {
-    Drawer,
-    DrawerClose,
-    DrawerContent,
-    DrawerDescription,
-    DrawerFooter,
-    DrawerHeader,
-    DrawerTitle,
-    DrawerTrigger,
-} from "@/components/ui/drawer"
+    Dialog,
+    DialogClose,
+    DialogContent,
+    DialogDescription,
+    DialogFooter,
+    DialogHeader,
+    DialogTitle,
+    DialogTrigger,
+} from "@/components/ui/dialog"
 import { Button } from "./ui/button"
 import { useAbout } from "@/context/AboutProvider";
+import { useEffect, useState } from "react";
 
 const MobileSidebar = () => {
     const { userData, loader } = useAbout();
+    const [width, setWidth] = useState(window.innerWidth);
+
+    useEffect(() => {
+        const handleResize = () => setWidth(window.innerWidth);
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
+    }, []);
+
 
     return (
         <>
-            <div className=" flex items-center gap-3 lg:hidden -ml-4 ">
-                <Link href="/" className="flex items-center gap-2 ">
-                    <Image src={logo} alt="Logo" className=" w-[32px] h-[32px] rounded-md " />
-                </Link>
-                <Drawer>
-                    <DrawerTrigger>
-                        {loader ? (
-                            <Image src={profilePic} width={35} height={35} alt="Profile Picture" className="  w-[32px] h-[32px] rounded-full border-2 border-gray-400 dark:border-gray-900" />
+            <div className=" flex items-center gap-3   ">
+
+                <Dialog>
+                    <DialogTrigger>
+                        {loader || !userData?.profile ? (
+                            <div className=" w-9 h-9 bg-gray-900 text-gray-50 dark:text-gray-900 font-semibold text-base flex  justify-center items-center dark:bg-gray-50 rounded-full border-2 border-gray-400 dark:border-gray-900">
+                                A
+                            </div>
                         ) : (
-                            <Image src={`${userData?.profile}`} width={35} height={35} alt="Profile Picture" className="  w-[32px] h-[32px] rounded-full border-2 border-gray-400 dark:border-gray-900" />
+                            <Image src={`${userData?.profile}`} width={36} height={36} alt="Profile Picture" className="  w-[33px] h-[33px] rounded-full border-2 border-gray-400 dark:border-gray-900" />
                         )}
-                    </DrawerTrigger>
-                    <DrawerContent className="dark:bg-gradient-to-t dark:from-neutral-900 dark:to-stone-950 bg-gradient-to-t from-white to-slate-50">
-                        <DrawerHeader>
-                            <DrawerTitle className=" sr-only">Are you absolutely sure?</DrawerTitle>
-                            <DrawerDescription><div className="flex flex-col dark:bg-gradient-to-t dark:from-neutral-900 dark:to-stone-950 bg-gradient-to-t from-white to-slate-50">
-                                <DrawerClose className=" flex w-full justify-end">
-                                    <RxCross2 size={22} />
-                                </DrawerClose>
-                                <div className=" flex flex-1 justify-center w-full h-full items-center mb-6">
+                    </DialogTrigger>
+                    <DialogContent className={`dark:bg-gradient-to-t dark:from-zinc-900 dark:to-gray-950  bg-gradient-to-t  from-white to-slate-50`}>
+                        <DialogHeader>
+                            <DialogTitle className=" sr-only">Are you absolutely sure?</DialogTitle>
+                            <DialogDescription>
+
+                                <div className=" flex flex-1 justify-center w-full h-full items-center  mb-8">
                                     <Sidebar />
                                 </div>
-                            </div></DrawerDescription>
-                        </DrawerHeader>
-                        {/* <DrawerFooter>
+                            </DialogDescription>
+                        </DialogHeader>
+                        {/* <DialogFooter>
                                 <Button>Submit</Button>
                                 
                                     <Button variant="outline">Cancel</Button>
-                                </DrawerClose>
-                            </DrawerFooter> */}
-                    </DrawerContent>
-                </Drawer>
+                                </DialogClose>
+                            </DialogFooter> */}
+                    </DialogContent>
+                </Dialog>
 
             </div>
 

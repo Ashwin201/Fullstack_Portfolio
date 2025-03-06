@@ -1,11 +1,14 @@
 "use client";
 import { SessionProvider } from "next-auth/react";
-import React, { ReactNode } from "react";
+import React, { ReactNode, useEffect, useState } from "react";
 import { Session } from "next-auth";
 import DesktopSidebar from "@/components/DesktopSidebar";
-import { ScrollToTop } from "@/components/ScrollToTop";
 import { usePathname } from "next/navigation";
 import { AboutProvider } from "@/context/AboutProvider";
+import Loader from "@/components/Loader";
+import { ScrollToTop } from "@/components/ScrollToTop";
+import { SidebarInset, SidebarProvider } from "@/components/ui/sidebar";
+import { AppSidebar } from "@/components/ui/app-sidebar";
 
 interface AuthProviderProps {
   children: ReactNode;
@@ -13,20 +16,30 @@ interface AuthProviderProps {
 }
 
 const AuthProvider: React.FC<AuthProviderProps> = ({ children, session }) => {
+  const [loading, setLoading] = useState(true)
 
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoading(false)
+    }, 1500)
+
+    return () => clearTimeout(timer)
+  }, [])
   const pathname = usePathname()
-  return <SessionProvider session={session}>
+  return loading ? <Loader /> : <SessionProvider session={session}>
 
     <AboutProvider>
-      <div className="grid grid-cols-12 h-screen">
-        <div className={`lg:col-span-3 overflow-hidden hidden lg:block ${pathname.startsWith("/admin") && "hidden"} `}>
-          <DesktopSidebar />
-        </div>
-        <div className={`col-span-12 ${pathname.startsWith("/admin") ? "lg:col-span-12" : "lg:col-span-9"}  overflow-auto `}>
+
+      <AppSidebar />
+      <SidebarInset className=" h-screen">
+
+        <div className={` overflow-y-scroll h-full scroll-class flex-col dark:bg-gradient-to-t dark:from-zinc-900 dark:to-gray-950  bg-gradient-to-t from-white to-zinc-50
+         dark:text-gray-300 `}>
           {children}
+          <ScrollToTop />
+
         </div>
-      </div>
-      <ScrollToTop />
+      </SidebarInset>
     </AboutProvider>
 
   </SessionProvider>;

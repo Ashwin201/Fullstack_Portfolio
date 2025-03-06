@@ -31,6 +31,7 @@ export const AboutProvider: React.FC<AboutProviderProps> = ({ children }) => {
       try {
         const response = await fetch('/api/about');
         const result: any = await response.json();
+        console.log(result)
         setData(result);
       } catch (error) {
         console.error('Error fetching data:', error);
@@ -42,7 +43,6 @@ export const AboutProvider: React.FC<AboutProviderProps> = ({ children }) => {
     fetchData();
   }, []);
 
-  console.log(data)
   const userData: any = {
     profile: data?.map((item: any) => item?.image)[0],
     resume: data?.map((item: any) => item?.resume)[0],

@@ -112,33 +112,38 @@ const ProjectDetail = ({ id }: { id: string }) => {
                   </div>
                 </div>
                 <div className="col-span-2 lg:col-span-1 flex flex-col justify-center gap-3 ">
-                  <p className="text-lg  font-bold mt-6 lg:mt-0 bg-clip-text text-transparent bg-gradient-to-b from-neutral-500 to-neutral-700">{data?.category}</p>
-                  <div className="font-bold text-2xl bg-clip-text text-transparent bg-gradient-to-b from-neutral-500 to-neutral-700">{data?.title}</div>
-                  <p className="font-medium text-gray-600 dark:text-gray-400">{data?.description}</p>
+                  <p className="text-lg  font-bold mt-6 lg:mt-0 bg-clip-text text-transparent dark:bg-gradient-to-t dark:from-zinc-900 dark:to-gray-950  bg-gradient-to-t from-white to-zinc-50">{data?.category}</p>
+                  <div className="font-bold text-2xl  theme-gradient-text">{data?.title}</div>
+                  <p className="font-medium text-gray-600 dark:text-gray-300">{data?.description}</p>
                   <div className="flex justify-between items-center mt-2">
-                    <Link href={`${data?.github}`} aria-label="link" target="_blank">
-                      <BsGithub size={38} />
-                    </Link>
-                    <Link
-                      href={`${data?.live}`}
-                      target="_blank"
-                      aria-label="See Live"
-                      className="font-semibold text-[17px] underline transition-all duration-300 text-gray-600 dark:text-gray-400"
-                    >
-                      See Live
-                    </Link>
+                    {
+                      data?.github &&
+                      <Link href={`${data?.github}`} aria-label="link" target="_blank">
+                        <BsGithub size={38} />
+                      </Link>
+                    }
+                    <div className="flex w-full justify-end">
+                      <Link
+                        href={`${data?.live}`}
+                        target="_blank"
+                        aria-label="See Live"
+                        className="font-semibold text-[17px] underline transition-all duration-300 text-gray-600 dark:text-gray-300"
+                      >
+                        See Live
+                      </Link>
+                    </div>
                   </div>
                 </div>
               </div>
 
               {data?.technology && (
                 <div>
-                  <h3 className="font-bold text-2xl mb-5 bg-clip-text text-transparent bg-gradient-to-b from-neutral-500 to-neutral-700">Technologies Used 💻 </h3>
+                  <h3 className="font-bold text-2xl mb-5  theme-gradient-text">Technologies Used 💻 </h3>
                   <div className="flex flex-wrap items-start gap-3 sm:gap-6">
                     {data?.technology?.map((item: any, index: any) => (
                       <span
                         key={index}
-                        className="py-[6px] px-4 sm:px-6 text-base font-semibold bg-inherit text-gray-600 dark:text-gray-400   rounded-full cursor-pointer shadow-sm dark:shadow-gray-800 shadow-gray-300"
+                        className="py-[6px] px-4 sm:px-6 text-base font-semibold bg-inherit text-gray-600 dark:text-gray-300   rounded-full cursor-pointer shadow-sm dark:shadow-gray-800 shadow-gray-300"
                       >
                         {item}
                       </span>
@@ -149,12 +154,12 @@ const ProjectDetail = ({ id }: { id: string }) => {
 
               {data?.feature?.length > 0 && (
                 <div>
-                  <h3 className="font-bold text-2xl mb-5 bg-clip-text text-transparent bg-gradient-to-b from-neutral-500 to-neutral-700">Key Features 🚀</h3>
+                  <h3 className="font-bold text-2xl mb-5  theme-gradient-text">Key Features 🚀</h3>
                   <div className="flex flex-col gap-2">
                     {data?.feature?.map((item: any, index: any) => (
                       <p
                         key={index}
-                        className="flex items-start text-start lg:items-center text-base font-semibold text-gray-600 dark:text-gray-400"
+                        className="flex items-start text-start lg:items-center text-base font-semibold text-gray-600 dark:text-gray-300"
                       >
                         ◾ &nbsp; {item}
                       </p>

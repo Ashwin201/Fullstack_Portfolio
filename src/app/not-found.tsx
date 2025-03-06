@@ -3,12 +3,12 @@ import Link from "next/link";
 
 export default function NotFound() {
   return (
-    <div className="flex items-center justify-center  flex-col gap-4 px-4 md:px-6">
+    <div className=" relative top-0 left-0 right-0 bottom-0 flex items-center justify-center  flex-col gap-4 px-4 md:px-6 w-full h-screen overflow-hidden ">
       <div className="flex flex-col items-center justify-center gap-6  text-center">
         <FileIcon className="h-24 w-24" />
         <div className="space-y-4 text-center">
           <h1 className="text-3xl font-bold sm:text-5xl">Page not found</h1>
-          <p className="max-w-[600px] text-gray-500 dark:text-gray-400 font-medium text-base md:text-xl/relaxed ">
+          <p className="max-w-[600px] text-gray-500 dark:text-gray-300 font-medium text-base md:text-xl/relaxed ">
             Sorry, we couldn&apos;t find the page you&apos;re looking for.
             Please check the URL in your address bar and try again.
           </p>

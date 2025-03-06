@@ -303,7 +303,7 @@ hover:bg-gray-900 duration-300 shadow-sm  "
                 <div className="line-clamp-7">
                   {data?.description?.map((item, index) => (
                     <p
-                      className="  text-gray-800 dark:text-gray-400 font-medium text-sm  tracking-wide"
+                      className="  text-gray-800 dark:text-gray-300 font-medium text-sm  tracking-wide"
                       key={index}
                     >
                       {item}

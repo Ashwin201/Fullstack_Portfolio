@@ -1,6 +1,6 @@
 import React from "react";
 export const metadata = {
-  title: "Admin Page",
+  title: "Admin ",
   description: "Showcasing code, design and projects.",
 };
 const AdminPage = () => {

@@ -72,14 +72,14 @@ hover:bg-gray-900 duration-300 shadow-sm  "
                 </div>
 
                 <div className="  col-span-2 flex flex-col  gap-2 justify-center w-full ">
-                  <p className="text-sm   font-medium  text-gray-800 dark:text-gray-400">
+                  <p className="text-sm   font-medium  text-gray-800 dark:text-gray-300">
                     {data?.category}
                   </p>
                   <p className=" text-base sm:text-lg font-semibold line-clamp-1 text-gray-800 dark:text-gray-300  ">
                     {data?.title}
                   </p>
 
-                  <p className=" line-clamp-4 text-xs sm:text-sm font-medium  text-gray-800 dark:text-gray-400">
+                  <p className=" line-clamp-4 text-xs sm:text-sm font-medium  text-gray-800 dark:text-gray-300">
                     {data?.description}
                   </p>
                   <div className=" flex gap-3 items-center mt-1">
