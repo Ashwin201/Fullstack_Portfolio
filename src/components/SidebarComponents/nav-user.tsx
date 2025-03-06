@@ -72,7 +72,7 @@ export function NavUser({
                         </SidebarMenuButton>
                     </DropdownMenuTrigger>
                     <DropdownMenuContent
-                        className="w-[--radix-dropdown-menu-trigger-width] min-w-56 rounded-lg"
+                        className="w-[--radix-dropdown-menu-trigger-width] min-w-56 rounded-lg dark:bg-gradient-to-t dark:from-zinc-900 dark:to-gray-950  bg-gradient-to-t from-white to-zinc-50"
                         side={isMobile ? "bottom" : "right"}
                         align="end"
                         sideOffset={4}
@@ -108,7 +108,7 @@ export function NavUser({
                         </DropdownMenuGroup>
                         <DropdownMenuSeparator />
                         <DropdownMenuItem>
-                            <a href="/admin" className="  text-sm font-medium text-gray-600 dark:text-gray-100 px-2 py-1 flex gap-2">
+                            <a href="/login" className="  text-sm font-medium text-gray-600 dark:text-gray-100 px-2 py-1 flex gap-2">
                                 <LogIn size={20} />
                                 Login as Admin
                             </a>
