@@ -10,6 +10,9 @@ const experienceSchema = new Schema({
   duration: {
     type: String,
   },
+  image: {
+    type: String,
+  },
   description: [
     {
       type: String,

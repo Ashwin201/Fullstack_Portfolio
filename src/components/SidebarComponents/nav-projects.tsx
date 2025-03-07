@@ -64,11 +64,13 @@ export function NavProjects({
         };
         fetchData();
     }, []);
+
+    console.log(data)
     return (
         <SidebarGroup className="group-data-[collapsible=icon]:hidden">
             <SidebarGroupLabel className=" text-sm  font-medium dark:text-gray-300 text-gray-700 "> Experience</SidebarGroupLabel>
 
-            <SidebarMenu className={` flex flex-col pt-4 gap-6 ${open && "px-3"}`}>
+            <SidebarMenu className={` flex flex-col pt-4 gap-6 ${open && "px-2"}`}>
                 {
                     loading ?
                         <div className="flex flex-col pt-1 gap-6">
@@ -107,8 +109,19 @@ export function NavProjects({
                             <div className=" flex flex-col gap-6">
 
                                 {data.map((item: any, index: number) => (
-                                    <div key={index} className=" flex gap-2 items-center">
-                                        <Building2Icon className=" text-gray-900 dark:text-gray-100" size={25} />
+                                    <div key={index} className=" flex gap-2 items-start">
+                                        {
+                                            item?.image ?
+                                                <img
+                                                    src={item?.image}
+                                                    alt="Image"
+                                                    width={25}
+                                                    height={25}
+                                                    className=" w-8 h-8   object-contain object-center"
+                                                />
+                                                :
+                                                <Building2Icon className=" text-gray-900 dark:text-gray-100" size={25} />
+                                        }
                                         <div className=" flex flex-col ">
                                             <span className=" text-sm font-medium text-gray-900 dark:text-gray-100">{item?.role}</span>
                                             <div className=" flex w-full gap-2 justify-between items-center">

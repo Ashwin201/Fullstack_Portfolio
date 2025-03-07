@@ -7,6 +7,7 @@ interface ExperienceAttributes {
   role: string;
   company: string;
   duration: string;
+  image: string;
   description: any;
 }
 
@@ -28,13 +29,19 @@ export async function GET(req: Request): Promise<NextResponse> {
 // Post request for Experience
 export async function POST(req: Request): Promise<NextResponse> {
   try {
-    const { role, company, duration, description }: ExperienceAttributes =
-      await req.json();
+    const {
+      role,
+      company,
+      duration,
+      image,
+      description,
+    }: ExperienceAttributes = await req.json();
     await connectToDb();
     const data = await Experience.create({
       role,
       company,
       duration,
+      image,
       description,
     });
     return NextResponse.json(data, { status: 200 });

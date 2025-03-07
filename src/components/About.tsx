@@ -5,7 +5,7 @@ import { FaGithub, FaInstagram, FaLinkedin } from 'react-icons/fa'
 import { IoIosMailUnread } from "react-icons/io";
 import { Button } from './ui/button';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import { CircleUser, FolderDown } from 'lucide-react';
+import { Building2Icon, CircleUser, FolderDown } from 'lucide-react';
 import { Skeleton } from './ui/skeleton';
 import ExperienceSkeleton from './Skeletons/ExperienceSkeleton';
 import { useAbout } from '@/context/AboutProvider';
@@ -203,18 +203,39 @@ const About = () => {
                         data?.map((item: any, index: number) => (
                             <div key={index} className="flex flex-col justify-start items-start text-start px-4   ">
                                 <div className=" border-l-[3px] border-gray-600 dark:border-gray-400 flex flex-col gap-16   ">
+
                                     <div className="relative ml-[30px] sm:ml-[65px]">
-                                        <AnimateOnVisible animation={"slideUp"} duration={0.9} className="  font-bold text-[28px]   theme-gradient-text   mb-2">
+                                        <div className=' flex gap-4 items-start mb-1'>
+                                            <AnimateOnVisible animation={"slideLeft"} duration={1.0} >
+                                                {
+                                                    item?.image ?
+                                                        <img
+                                                            src={item?.image}
+                                                            alt="Image"
+                                                            width={25}
+                                                            height={25}
+                                                            className=" w-16 h-12  object-contain object-center"
+                                                        />
+                                                        :
+                                                        <Building2Icon className=" text-gray-900 dark:text-gray-100" size={25} />
+                                                }
+                                            </AnimateOnVisible>
+                                            <div className=' flex flex-col'>
+                                                {item?.company &&
+                                                    <AnimateOnVisible animation={"slideRight"} duration={1.0} className="  font-bold text-xl theme-gradient-text ">
+                                                        {item?.company}
+                                                    </AnimateOnVisible>
+                                                }
+                                                <AnimateOnVisible animation={"slideRight"} duration={1.0} className="  text-sm mb-2 font-semibold">
+                                                    {item?.duration}
+                                                </AnimateOnVisible>
+                                            </div>
+
+                                        </div>
+                                        <AnimateOnVisible animation={"slideUp"} duration={0.9} className="  font-bold text-2xl  theme-gradient-text   mb-4">
                                             {item?.role}
                                         </AnimateOnVisible>
-                                        {item?.company &&
-                                            <AnimateOnVisible animation={"slideUp"} duration={1.0} className="  font-bold text-xl text-blue-600 mb-2">
-                                                {item?.company}
-                                            </AnimateOnVisible>
-                                        }
-                                        <AnimateOnVisible animation={"slideUp"} duration={1.0} className="  text-xl mb-2 font-bold">
-                                            {item?.duration}
-                                        </AnimateOnVisible>
+
                                         <div className={`${index <= data?.length - 2 && " mb-8"}`}>
                                             {item?.description?.map((desc: any, index: number) => {
                                                 return (

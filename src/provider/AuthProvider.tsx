@@ -27,30 +27,20 @@ const AuthProvider: React.FC<AuthProviderProps> = ({ children, session }) => {
   }, [])
   const pathName = usePathname()
   return loading ? <Loader /> : <SessionProvider session={session}>
-    {
-      pathName.startsWith("/admin") ?
-        <AboutProvider>
-          <div className={` overflow-y-scroll h-full scroll-class flex-col dark:bg-gradient-to-t dark:from-zinc-900 dark:to-gray-950  bg-gradient-to-t from-white to-zinc-50
+
+    <AboutProvider>
+
+      <AppSidebar />
+      <SidebarInset className=" h-screen">
+
+        <div className={` overflow-y-scroll h-full scroll-class flex-col dark:bg-gradient-to-t dark:from-zinc-900 dark:to-gray-950  bg-gradient-to-t from-white to-zinc-50
          dark:text-gray-300 `}>
-            {children}
-            <ScrollToTop />
-          </div>
-        </AboutProvider>
-        :
-        <AboutProvider>
+          {children}
+          <ScrollToTop />
 
-          <AppSidebar />
-          <SidebarInset className=" h-screen">
-
-            <div className={` overflow-y-scroll h-full scroll-class flex-col dark:bg-gradient-to-t dark:from-zinc-900 dark:to-gray-950  bg-gradient-to-t from-white to-zinc-50
-         dark:text-gray-300 `}>
-              {children}
-              <ScrollToTop />
-
-            </div>
-          </SidebarInset>
-        </AboutProvider>
-    }
+        </div>
+      </SidebarInset>
+    </AboutProvider>
 
   </SessionProvider>;
 };

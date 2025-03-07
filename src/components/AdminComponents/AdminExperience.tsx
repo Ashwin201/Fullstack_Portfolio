@@ -1,7 +1,7 @@
 "use client";
 import toast from "react-hot-toast";
 import React, { useEffect, useState } from "react";
-import { BiSolidEditAlt, BiSolidShow } from "react-icons/bi";
+import { BiImageAdd, BiSolidEditAlt, BiSolidShow } from "react-icons/bi";
 import {
   MdAdd,
   MdDeleteOutline,
@@ -11,12 +11,16 @@ import {
 import { RiDeleteBinFill } from "react-icons/ri";
 import Link from "next/link";
 import Loader from "../Loader";
+import { CldUploadButton } from "next-cloudinary";
+import { TiDelete } from "react-icons/ti";
+import { Building2Icon } from "lucide-react";
 
 interface Experience {
   _id: string;
   role: string;
   company: string;
   duration: string;
+  image: string;
   description: string[];
 }
 
@@ -29,7 +33,8 @@ const AdminExperience: React.FC = () => {
   const [company, setCompany] = useState<string>("");
   const [duration, setDuration] = useState<string>("");
   const [showForm, setShowForm] = useState(false);
-
+  const [image, setImage] = useState("")
+  const [publicId, setPublicId] = useState("")
   const handleDescription = (e: React.FormEvent<HTMLButtonElement>) => {
     e.preventDefault();
     if (descInput.trim() !== "") {
@@ -38,9 +43,45 @@ const AdminExperience: React.FC = () => {
     }
   };
 
+  //Function to delete descriptions
   const handleDeleteDescription = (index: number) => {
     setDescriptions((prev) => prev.filter((_, i) => i !== index));
   };
+
+
+  // Handle Image upload
+  const handleImageUpload = (result: any) => {
+    console.log(result);
+    const info = result.info;
+    if ("secure_url" in info && "public_id" in info) {
+      const url = info.secure_url;
+      const public_id = info.public_id;
+      setImage(url);
+      setPublicId(public_id);
+    } else {
+      // Handle the case when the image limit is reached (display a message, etc.)
+      console.log("Image upload fail");
+    }
+  };
+
+  // For delete image
+  const handleRemoveImage = async () => {
+    try {
+      const res = await fetch(`/api/removeImage`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(publicId),
+      });
+
+      if (res.ok) {
+        setImage("");
+        setPublicId("");
+      }
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -61,6 +102,7 @@ const AdminExperience: React.FC = () => {
           role,
           company,
           duration,
+          image,
           description: descriptions,
         }),
       });
@@ -71,6 +113,7 @@ const AdminExperience: React.FC = () => {
           role,
           company,
           duration,
+          image,
           description: descriptions,
           _id: Math.random().toString(), // This is just a placeholder for _id
         };
@@ -155,6 +198,49 @@ const AdminExperience: React.FC = () => {
             </button>
           </div>
           <form className=" flex gap-5 flex-col " onSubmit={handleSubmit}>
+            <div className=" w-full ">
+              <h6 className="  text-lg mb-1 ml-1 w-full flex justify-center items-center  font-semibold text-gray-900 dark:text-gray-300 ">
+                Add Company Logo
+              </h6>
+              {image ? (
+                <div
+                  className=" w-full flex  justify-center items-center  rounded-md border-1 border-gray-200 dark:border-gray-800 "
+                >
+                  <div className="relative border-2 rounded-md">
+                    <img
+                      src={image}
+                      alt="Image"
+                      width={100}
+                      height={100}
+                      className=" cursor-pointer h-32 w-full   object-cover object-center"
+                    />
+                    <span
+                      className=" cursor-pointer absolute bg-white text-black p-[1px] rounded-full -top-2 -right-2"
+                      onClick={handleRemoveImage}
+                    >
+                      <TiDelete size={18} />
+                    </span>
+                  </div>
+                </div>
+              ) : (
+                <div
+                  className=" w-full flex  justify-center items-center  rounded-md border-1 border-gray-200 dark:border-gray-800 "
+                >
+                  <CldUploadButton
+                    uploadPreset={process.env.NEXT_PUBLIC_CLOUDINARY_PRESET}
+                    onUpload={handleImageUpload}
+                    className={` p-20  border-4  flex flex-col gap-1 items-center`}
+                  >
+                    <BiImageAdd size={30} />
+                    <h3 className="   text-sm font-medium text-gray-700 dark:text-gray-300 ">
+                      Upload Image
+                    </h3>
+                  </CldUploadButton>
+                </div>
+              )
+              }
+
+            </div>
             <div className=" w-full">
               <label
                 htmlFor="role"
@@ -289,6 +375,22 @@ hover:bg-gray-900 duration-300 shadow-sm  "
                 key={index}
                 className=" mt-10 shadow-sm shadow-gray-300 dark:shadow-gray-900 p-5 flex flex-col gap-3 items-start"
               >
+                {
+                  data?.image ?
+                    <div className="relative ">
+                      <img
+                        src={`${data?.image}`}
+                        alt="Image"
+                        width={100}
+                        height={100}
+                        className=" cursor-pointer h-16 w-full mb-4   object-contain object-center"
+                      />
+
+                    </div>
+                    :
+                    <Building2Icon className=" text-gray-800 dark:text-gray-100" size={64} />
+
+                }
                 <h1 className="text-gray-900 dark:text-gray-300 font-bold text-xl">
                   {data?.role}
                 </h1>

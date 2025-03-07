@@ -8,6 +8,7 @@ interface ExperienceAttributes {
   role: string;
   company: string;
   duration: string;
+  image: string;
   description: any;
 }
 
@@ -49,8 +50,13 @@ export async function PUT(
         { status: 400 }
       );
     }
-    const { role, company, duration, description }: ExperienceAttributes =
-      await req.json();
+    const {
+      role,
+      company,
+      duration,
+      image,
+      description,
+    }: ExperienceAttributes = await req.json();
     await connectToDb();
     const data = await Experience.findByIdAndUpdate(
       { _id: id },
@@ -58,6 +64,7 @@ export async function PUT(
         role,
         company,
         duration,
+        image,
         description,
       }
     );
