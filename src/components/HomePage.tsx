@@ -21,14 +21,14 @@ const PlayerWithNoSSR = dynamic(
 function HomePage() {
   return (
     <div className="sm:container px-4    flex flex-col justify-center">
-      <section className=" py-12 mb-2 sm:py-14  sm:mb-4  flex flex-col md:flex-row items-center gap-8 md:gap-16">
+      <section className=" py-10 mb-2 sm:py-14  sm:mb-4  flex flex-col md:flex-row items-center gap-8 md:gap-16">
         <div className="flex-1 space-y-3 sm:space-y-5">
           <AnimateOnVisible animation={"slideRight"} duration={0.6}>
             <Button variant={"outline"} className=" font-medium  rounded-full mb-2">
               Full Stack Developer
             </Button>
           </AnimateOnVisible>
-          <AnimateOnVisible animation={"slideRight"} duration={0.6} className="text-[30px] sm:text-4xl  md:text-[50px] lg:text-[55px] font-bold  py-2
+          <AnimateOnVisible animation={"slideRight"} duration={0.6} className="text-[30px] sm:text-4xl  md:text-[50px] lg:text-[55px] font-bold  py-t
             theme-gradient-text">
             <span >Hi, I&apos;m </span><span>Ashmin Sharma</span>
           </AnimateOnVisible>
