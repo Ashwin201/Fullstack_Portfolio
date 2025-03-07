@@ -206,20 +206,18 @@ const About = () => {
 
                                     <div className="relative ml-[30px] sm:ml-[65px]">
                                         <div className=' flex gap-4 items-start mb-1'>
-                                            <AnimateOnVisible animation={"slideLeft"} duration={1.0} >
-                                                {
-                                                    item?.image ?
-                                                        <img
-                                                            src={item?.image}
-                                                            alt="Image"
-                                                            width={25}
-                                                            height={25}
-                                                            className=" w-16 h-12  object-contain object-center"
-                                                        />
-                                                        :
-                                                        <Building2Icon className=" text-gray-900 dark:text-gray-100" size={25} />
-                                                }
-                                            </AnimateOnVisible>
+                                            {
+                                                item?.image ?
+                                                    <img
+                                                        src={item?.image}
+                                                        alt="Image"
+                                                        width={25}
+                                                        height={25}
+                                                        className=" w-16 h-12  object-contain object-center"
+                                                    />
+                                                    :
+                                                    <Building2Icon className=" text-gray-900 dark:text-gray-100" size={25} />
+                                            }
                                             <div className=' flex flex-col'>
                                                 {item?.company &&
                                                     <AnimateOnVisible animation={"slideRight"} duration={1.0} className="  font-bold text-xl theme-gradient-text ">
