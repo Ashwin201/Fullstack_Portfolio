@@ -204,7 +204,7 @@ const About = () => {
                             <div key={index} className="flex flex-col justify-start items-start text-start px-4   ">
                                 <div className=" border-l-[3px] border-gray-600 dark:border-gray-400 flex flex-col gap-16   ">
 
-                                    <div className="relative ml-[30px] sm:ml-[65px]">
+                                    <div className={`relative ml-[30px] sm:ml-[65px] ${index < data?.length - 1 && "pb-4"}`}>
                                         <div className=' flex gap-4 items-start mb-1'>
                                             {
                                                 item?.image ?
