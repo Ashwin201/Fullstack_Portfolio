@@ -56,7 +56,7 @@ const AdminNavbar = () => {
 
   return (
     <div className="  flex items-center justify-between h-14 w-full  px-4 sm:px-8  ">
-      <Link href="/" aria-label="Home">
+      <Link href="/admin" aria-label="Home">
         <Image src={logo} alt="logo" width={32} height={32} />
       </Link>
       <ul className=" hidden sm:flex items-center gap-8 ">

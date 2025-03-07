@@ -54,7 +54,7 @@ const Login = () => {
     }
 
     return (
-        <section className=" min-h-[calc(100vh-60px)] w-full  flex items-center justify-center sm:m-auto">
+        <section className=" min-h-[calc(100vh-60px)] min-w-full overflow-hidden w-full  flex items-center justify-center sm:m-auto">
             <div className="sm:w-fit w-full bg-transparent">
                 <CardHeader className="space-y-2">
                     <div className="flex justify-center mb-4">

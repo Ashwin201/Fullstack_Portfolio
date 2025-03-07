@@ -202,14 +202,13 @@ const About = () => {
 
                         data?.map((item: any, index: number) => (
                             <div key={index} className="flex flex-col justify-start items-start text-start px-4   ">
-
                                 <div className=" border-l-[3px] border-gray-600 dark:border-gray-400 flex flex-col gap-16   ">
                                     <div className="relative ml-[30px] sm:ml-[65px]">
                                         <AnimateOnVisible animation={"slideUp"} duration={0.9} className="  font-bold text-[28px]   theme-gradient-text   mb-2">
                                             {item?.role}
                                         </AnimateOnVisible>
                                         {item?.company &&
-                                            <AnimateOnVisible animation={"slideUp"} duration={1.0} className="  font-bold text-xl text-sky-700 mb-2">
+                                            <AnimateOnVisible animation={"slideUp"} duration={1.0} className="  font-bold text-xl text-blue-600 mb-2">
                                                 {item?.company}
                                             </AnimateOnVisible>
                                         }
