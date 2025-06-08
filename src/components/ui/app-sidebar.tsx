@@ -110,7 +110,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
     return (
         <Sidebar collapsible='icon' {...props} className={` w-[270px] border-r h-screen overflow-hidden flex flex-col justify-between `}>
             <SidebarHeader className="">
-                <div className="flex  items-center pt-1  pl-1 sm:px-0  justify-between w-full">
+                <div className="flex  items-center pt-1   sm:px-0  justify-between w-full">
                     <Link href="/" className="flex items-center gap-2 ">
                         <Image src={logo} alt="Logo" className=" w-8 h-auto rounded-md " />
                     </Link>

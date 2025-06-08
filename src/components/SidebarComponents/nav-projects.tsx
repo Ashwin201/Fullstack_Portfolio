@@ -29,6 +29,7 @@ import {
 import { useEffect, useState } from "react"
 import { Skeleton } from "../ui/skeleton"
 import { ScrollArea } from "../ui/scroll-area"
+import { useExpeience } from "@/context/ExperienceProvider"
 
 export function NavProjects({
     projects,
@@ -39,32 +40,8 @@ export function NavProjects({
         icon: LucideIcon
     }[]
 }) {
-
     const { open, isMobile } = useSidebar()
-    const [data, setData] = useState<any>([]);
-    const [loading, setLoading] = useState(true)
-    // console.log(userData)
-    useEffect(() => {
-        const fetchData = async () => {
-            try {
-                const res = await fetch(`/api/experience`, {
-                    headers: {
-                        "Content-Type": "application/json",
-                    },
-                });
-                if (res.ok) {
-                    const response = await res.json();
-                    // console.log(response)
-                    setData(response);
-                    setLoading(false)
-                }
-            } catch (error) {
-                console.log(error);
-            }
-        };
-        fetchData();
-    }, []);
-
+    const { loading, data } = useExpeience()
     console.log(data)
     return (
         <SidebarGroup className="group-data-[collapsible=icon]:hidden">

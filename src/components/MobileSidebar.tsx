@@ -35,11 +35,13 @@ const MobileSidebar = () => {
                 <Dialog>
                     <DialogTrigger>
                         {loader || !userData?.profile ? (
-                            <div className=" w-9 h-9 bg-gray-900 text-gray-50 dark:text-gray-900 font-semibold text-base flex  justify-center items-center dark:bg-gray-50 rounded-full border-2 border-gray-400 dark:border-gray-900">
+                            <div className=" w-9 h-9 bg-gray-900 text-gray-50 dark:text-gray-900 font-semibold text-base flex  justify-center items-center
+                             dark:bg-gray-50 rounded-full border-2 border-gray-200 dark:border-gray-900">
                                 A
                             </div>
                         ) : (
-                            <Image src={`${userData?.profile}`} width={36} height={36} alt="Profile Picture" className="  w-[33px] h-[33px] rounded-full border-2 border-gray-400 dark:border-gray-900" />
+                            <Image src={`${userData?.profile}`} width={36} height={36} alt="Profile Picture" className=" object-cover  w-[33px] h-[33px] 
+                            rounded-full border-2 border-gray-200 dark:border-gray-900" />
                         )}
                     </DialogTrigger>
                     <DialogContent className={`dark:bg-gradient-to-t dark:from-zinc-900 dark:to-gray-950  bg-gradient-to-t  from-white to-slate-50`}>

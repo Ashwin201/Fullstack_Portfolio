@@ -9,6 +9,7 @@ import Loader from "@/components/Loader";
 import { ScrollToTop } from "@/components/ScrollToTop";
 import { SidebarInset, SidebarProvider } from "@/components/ui/sidebar";
 import { AppSidebar } from "@/components/ui/app-sidebar";
+import { ExperienceProvider } from "@/context/ExperienceProvider";
 
 interface AuthProviderProps {
   children: ReactNode;
@@ -29,20 +30,21 @@ const AuthProvider: React.FC<AuthProviderProps> = ({ children, session }) => {
   return loading ? <Loader /> : <SessionProvider session={session}>
 
     <AboutProvider>
+      <ExperienceProvider>
+        <AppSidebar />
+        <SidebarInset className=" h-screen">
 
-      <AppSidebar />
-      <SidebarInset className=" h-screen">
-
-        <div className={` overflow-y-scroll h-full scroll-class flex-col dark:bg-gradient-to-t dark:from-zinc-900 dark:to-gray-950  bg-gradient-to-t from-white to-zinc-50
+          <div className={` overflow-y-scroll h-full scroll-class flex-col dark:bg-gradient-to-t dark:from-zinc-900 dark:to-gray-950  bg-gradient-to-t from-white to-zinc-50
          dark:text-gray-300 `}>
-          {children}
-          <ScrollToTop />
+            {children}
+            <ScrollToTop />
 
-        </div>
-      </SidebarInset>
+          </div>
+        </SidebarInset>
+      </ExperienceProvider>
     </AboutProvider>
 
-  </SessionProvider>;
+  </SessionProvider >;
 };
 
 export default AuthProvider;

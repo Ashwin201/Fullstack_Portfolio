@@ -34,11 +34,11 @@ export function NavMain({
     }[]
 }) {
 
-    const { open, setOpenMobile } = useSidebar()
+    const { open } = useSidebar()
     return (
         <SidebarGroup>
-            <SidebarGroupLabel className=" text-sm mb-2 font-medium dark:text-gray-300 text-gray-700 "> Links</SidebarGroupLabel>
-            <SidebarMenu className={`" flex flex-col gap-2 ${!open && "-ml-3"}`}>
+            <SidebarGroupLabel className=" text-sm mb-2 font-medium "> Links</SidebarGroupLabel>
+            <SidebarMenu className=" flex flex-col gap-2">
                 {items.map((item) => (
                     <Collapsible
                         key={item.title}
@@ -48,12 +48,15 @@ export function NavMain({
                     >
                         <SidebarMenuItem>
                             <CollapsibleTrigger asChild>
-                                <SidebarMenuButton tooltip={item.title}>
-                                    <a href={item.url} onClick={() => setOpenMobile(false)} className={`${open && "py-1"} flex gap-2 text-[14.5px] font-medium dark:text-gray-100 text-gray-900  items-center`}>
+                                <SidebarMenuButton tooltip={item.title} className={`${!open && "-ml-3"}`}>
+                                    <a href={item.url} className={`${open && "py-1 px-2"} flex gap-2 text-[14.5px] font-medium  items-center`}>
                                         {item.icon && item.icon}
-                                        <span>{item.title}</span>
-                                        {/* <ChevronRight className="ml-auto transition-transform duration-200 group-data-[state=open]/collapsible:rotate-90" /> */}
+                                        {
+                                            open &&
+                                            <span>{item.title}</span>
+                                        }
                                     </a>
+                                    {/* <ChevronRight className="ml-auto transition-transform duration-200 group-data-[state=open]/collapsible:rotate-90" /> */}
                                 </SidebarMenuButton>
                             </CollapsibleTrigger>
 
