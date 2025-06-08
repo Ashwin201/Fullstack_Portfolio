@@ -7,6 +7,7 @@ import { Toaster } from "react-hot-toast";
 import AuthProvider from "@/provider/AuthProvider";
 import { SidebarProvider } from "@/components/ui/sidebar";
 // const font = Inter({ subsets: ["latin"] });
+import { Analytics } from "@vercel/analytics/next"
 const font = Poppins({ subsets: ["latin"], weight: ["100", "300", "400", "500", "600", "700", "900"] });
 
 export const metadata: Metadata = {
@@ -34,6 +35,7 @@ export default function RootLayout({
             <SidebarProvider>
               <AuthProvider>
                 {children}
+                <Analytics />
                 <Toaster
                   toastOptions={{
                     style: {
@@ -46,6 +48,7 @@ export default function RootLayout({
               </AuthProvider>
             </SidebarProvider>
           </ThemeProvider>
+
         </body>
       </html>
     </>
