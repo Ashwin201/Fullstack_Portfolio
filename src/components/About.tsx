@@ -153,7 +153,7 @@ const About = () => {
                             </AnimateOnVisible>
                             <AnimateOnVisible animation={"slideUp"} duration={1.0} className="  text-xl mb-3 font-bold text-gray-600 dark:text-gray-300">2021-2025</AnimateOnVisible>
                             <AnimateOnVisible animation={"slideUp"} duration={1.0} className=" flex items-start gap-1 font-medium dark:text-gray-300 text-gray-600  text-base">
-                                I completed my Bachelor's degree in Computer Science and Engineering from Ganga Institute of Technology and Management, located in Kablana, Jhajjar.
+                                I completed my Bachelor&apos;s degree in Computer Science and Engineering from Ganga Institute of Technology and Management, located in Kablana, Jhajjar.
                             </AnimateOnVisible>
 
                             <span className=" absolute top-0 left-0  flex justify-center align-middle items-center  w-[25px] p-1 h-[25px]  sm:w-[28px] sm:h-[28px] bg-white
